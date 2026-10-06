@@ -1,0 +1,266 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+        <div class="announcements-page">
+
+            <!-- Page Header -->
+            <div class="announcements-header">
+                <div>
+                    <h1>Announcements</h1>
+                    <p>Stay updated with the latest college announcements and notices.</p>
+                </div>
+            </div>
+
+
+            <!-- Announcement Summary -->
+            <div class="announcement-summary">
+
+                <div class="announcement-card">
+                    <div class="announcement-icon">📢</div>
+                    <div>
+                        <small>Total Announcements</small>
+                        <h2>12</h2>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-icon">🔔</div>
+                    <div>
+                        <small>Unread</small>
+                        <h2>4</h2>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-icon">📅</div>
+                    <div>
+                        <small>This Week</small>
+                        <h2>5</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Important Announcements -->
+            <div class="announcement-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Important Announcements</h2>
+                        <p>Latest updates from your college.</p>
+                    </div>
+                </div>
+
+
+                <!-- Announcement 1 -->
+                <div class="announcement-item unread">
+
+                    <div class="announcement-item-icon important">
+                        !
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <div class="announcement-title">
+                            <h3>Semester Examination Schedule Released</h3>
+                            <span class="announcement-badge important-badge">
+                                Important
+                            </span>
+                        </div>
+
+                        <p>
+                            The semester examination schedule has been released.
+                            Students are advised to check the examination timetable
+                            and prepare accordingly.
+                        </p>
+
+                        <div class="announcement-meta">
+                            <span>📅 05 Oct 2026</span>
+                            <span>🏫 Examination Department</span>
+                        </div>
+
+                    </div>
+
+                    <span class="unread-dot"></span>
+
+                </div>
+
+
+                <!-- Announcement 2 -->
+                <div class="announcement-item unread">
+
+                    <div class="announcement-item-icon academic">
+                        📚
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <div class="announcement-title">
+                            <h3>Assignment Submission Deadline Extended</h3>
+                            <span class="announcement-badge academic-badge">
+                                Academic
+                            </span>
+                        </div>
+
+                        <p>
+                            The submission deadline for pending assignments has been
+                            extended. Students can submit their assignments before
+                            the revised deadline.
+                        </p>
+
+                        <div class="announcement-meta">
+                            <span>📅 04 Oct 2026</span>
+                            <span>👨‍🏫 Academic Department</span>
+                        </div>
+
+                    </div>
+
+                    <span class="unread-dot"></span>
+
+                </div>
+
+
+                <!-- Announcement 3 -->
+                <div class="announcement-item">
+
+                    <div class="announcement-item-icon event">
+                        🎉
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <div class="announcement-title">
+                            <h3>Annual College Festival 2026</h3>
+                            <span class="announcement-badge event-badge">
+                                Event
+                            </span>
+                        </div>
+
+                        <p>
+                            The annual college festival will be conducted this month.
+                            Students interested in participating can register through
+                            the student portal.
+                        </p>
+
+                        <div class="announcement-meta">
+                            <span>📅 02 Oct 2026</span>
+                            <span>🎓 Student Council</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Announcement 4 -->
+                <div class="announcement-item">
+
+                    <div class="announcement-item-icon general">
+                        📢
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <div class="announcement-title">
+                            <h3>College Library Timing Updated</h3>
+                            <span class="announcement-badge general-badge">
+                                General
+                            </span>
+                        </div>
+
+                        <p>
+                            The library will remain open until 8:00 PM on working days
+                            to help students with their examination preparation.
+                        </p>
+
+                        <div class="announcement-meta">
+                            <span>📅 01 Oct 2026</span>
+                            <span>📖 Library Department</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Announcement 5 -->
+                <div class="announcement-item">
+
+                    <div class="announcement-item-icon academic">
+                        📝
+                    </div>
+
+                    <div class="announcement-content">
+
+                        <div class="announcement-title">
+                            <h3>Internal Assessment Results Published</h3>
+                            <span class="announcement-badge academic-badge">
+                                Academic
+                            </span>
+                        </div>
+
+                        <p>
+                            Internal assessment results have been published.
+                            Students can view their marks from the Results section.
+                        </p>
+
+                        <div class="announcement-meta">
+                            <span>📅 28 Sep 2026</span>
+                            <span>🏫 Academic Department</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Older Announcements -->
+            <div class="older-announcements">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Older Announcements</h2>
+                        <p>Previously published college notices.</p>
+                    </div>
+                </div>
+
+                <div class="older-announcement-list">
+
+                    <div class="older-announcement">
+                        <h3>Holiday Notice - Gandhi Jayanti</h3>
+                        <span>26 Sep 2026</span>
+                    </div>
+
+                    <div class="older-announcement">
+                        <h3>Scholarship Application Notice</h3>
+                        <span>20 Sep 2026</span>
+                    </div>
+
+                    <div class="older-announcement">
+                        <h3>Student ID Card Verification</h3>
+                        <span>15 Sep 2026</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

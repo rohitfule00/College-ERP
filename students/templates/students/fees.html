@@ -1,0 +1,310 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+        <div class="fees-page">
+
+            <!-- Page Header -->
+            <div class="fees-header">
+                <div>
+                    <h1>Fees</h1>
+                    <p>View your fee details and payment history.</p>
+                </div>
+
+                <span class="academic-year">
+                    Academic Year 2026-27
+                </span>
+            </div>
+
+
+            <!-- Fee Summary -->
+            <div class="fee-summary">
+
+                <div class="fee-card">
+                    <div class="fee-icon">💰</div>
+                    <div>
+                        <small>Total Fees</small>
+                        <h2>₹85,000</h2>
+                    </div>
+                </div>
+
+                <div class="fee-card">
+                    <div class="fee-icon">✅</div>
+                    <div>
+                        <small>Paid Amount</small>
+                        <h2>₹60,000</h2>
+                    </div>
+                </div>
+
+                <div class="fee-card">
+                    <div class="fee-icon">⏳</div>
+                    <div>
+                        <small>Pending Amount</small>
+                        <h2>₹25,000</h2>
+                    </div>
+                </div>
+
+                <div class="fee-card">
+                    <div class="fee-icon">📅</div>
+                    <div>
+                        <small>Next Due Date</small>
+                        <h2>15 Nov</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Payment Overview -->
+            <div class="fee-overview">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Payment Overview</h2>
+                        <p>Your current fee payment progress.</p>
+                    </div>
+                </div>
+
+                <div class="fee-overview-content">
+
+                    <div class="fee-progress-circle">
+                        <strong>71%</strong>
+                        <span>Paid</span>
+                    </div>
+
+                    <div class="fee-progress-info">
+
+                        <h3>₹60,000 of ₹85,000 paid</h3>
+
+                        <div class="fee-progress-bar">
+                            <div style="width: 71%;"></div>
+                        </div>
+
+                        <div class="fee-progress-details">
+                            <span>Paid: ₹60,000</span>
+                            <span>Remaining: ₹25,000</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Fee Breakdown -->
+            <div class="fee-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Fee Breakdown</h2>
+                        <p>Detailed academic year fee structure.</p>
+                    </div>
+                </div>
+
+                <div class="fee-table">
+
+                    <div class="fee-table-header">
+                        <span>Fee Type</span>
+                        <span>Total Amount</span>
+                        <span>Paid</span>
+                        <span>Pending</span>
+                        <span>Status</span>
+                    </div>
+
+
+                    <div class="fee-row">
+
+                        <span class="fee-name">
+                            Tuition Fees
+                        </span>
+
+                        <span>₹50,000</span>
+
+                        <span>₹40,000</span>
+
+                        <span>₹10,000</span>
+
+                        <span class="fee-status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                    <div class="fee-row">
+
+                        <span class="fee-name">
+                            Examination Fees
+                        </span>
+
+                        <span>₹10,000</span>
+
+                        <span>₹10,000</span>
+
+                        <span>₹0</span>
+
+                        <span class="fee-status paid">
+                            Paid
+                        </span>
+
+                    </div>
+
+
+                    <div class="fee-row">
+
+                        <span class="fee-name">
+                            Library Fees
+                        </span>
+
+                        <span>₹5,000</span>
+
+                        <span>₹5,000</span>
+
+                        <span>₹0</span>
+
+                        <span class="fee-status paid">
+                            Paid
+                        </span>
+
+                    </div>
+
+
+                    <div class="fee-row">
+
+                        <span class="fee-name">
+                            Laboratory Fees
+                        </span>
+
+                        <span>₹10,000</span>
+
+                        <span>₹5,000</span>
+
+                        <span>₹5,000</span>
+
+                        <span class="fee-status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                    <div class="fee-row">
+
+                        <span class="fee-name">
+                            Other Charges
+                        </span>
+
+                        <span>₹10,000</span>
+
+                        <span>₹0</span>
+
+                        <span>₹10,000</span>
+
+                        <span class="fee-status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Payment History -->
+            <div class="payment-history">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Payment History</h2>
+                        <p>Your previous fee payments.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="payment-list">
+
+                    <div class="payment-row">
+
+                        <div class="payment-icon">
+                            ✓
+                        </div>
+
+                        <div class="payment-details">
+                            <h3>Semester Fee - First Installment</h3>
+                            <p>Payment ID: PAY2026001</p>
+                        </div>
+
+                        <div class="payment-date">
+                            <small>Date</small>
+                            <strong>10 Aug 2026</strong>
+                        </div>
+
+                        <div class="payment-amount">
+                            <strong>₹30,000</strong>
+                            <span>Paid</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-row">
+
+                        <div class="payment-icon">
+                            ✓
+                        </div>
+
+                        <div class="payment-details">
+                            <h3>Semester Fee - Second Installment</h3>
+                            <p>Payment ID: PAY2026002</p>
+                        </div>
+
+                        <div class="payment-date">
+                            <small>Date</small>
+                            <strong>12 Sep 2026</strong>
+                        </div>
+
+                        <div class="payment-amount">
+                            <strong>₹30,000</strong>
+                            <span>Paid</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pending Payment -->
+            <div class="pending-payment">
+
+                <div>
+                    <h2>₹25,000 Pending</h2>
+                    <p>Your remaining fee amount is due by 15 November 2026.</p>
+                </div>
+
+                <button class="pay-fee-button">
+                    Pay Fees
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

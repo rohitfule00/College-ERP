@@ -1,0 +1,282 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+
+        <div class="results-page">
+
+            <!-- Page Header -->
+            <div class="results-header">
+                <div>
+                    <h1>My Results</h1>
+                    <p>View your semester marks, grades and academic performance.</p>
+                </div>
+
+                <select class="semester-select">
+                    <option>Semester 6</option>
+                    <option>Semester 5</option>
+                    <option>Semester 4</option>
+                    <option>Semester 3</option>
+                </select>
+            </div>
+
+
+            <!-- Result Summary -->
+            <div class="result-summary">
+
+                <div class="result-card">
+                    <div class="result-icon">🎓</div>
+                    <div>
+                        <small>Current SGPA</small>
+                        <h2>8.4</h2>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">📊</div>
+                    <div>
+                        <small>Overall CGPA</small>
+                        <h2>8.2</h2>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">📚</div>
+                    <div>
+                        <small>Total Credits</small>
+                        <h2>24</h2>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">✅</div>
+                    <div>
+                        <small>Result Status</small>
+                        <h2>Pass</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Semester Result -->
+            <div class="result-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Semester 6 Result</h2>
+                        <p>Subject-wise academic performance.</p>
+                    </div>
+
+                    <span class="result-status-pass">PASS</span>
+                </div>
+
+
+                <!-- Table -->
+                <div class="result-table">
+
+                    <!-- Header -->
+                    <div class="result-table-header">
+
+                        <span>Subject</span>
+                        <span>Credits</span>
+                        <span>Marks</span>
+                        <span>Grade</span>
+                        <span>Grade Point</span>
+                        <span>Status</span>
+
+                    </div>
+
+
+                    <!-- Subject 1 -->
+                    <div class="result-row">
+
+                        <span class="result-subject">
+                            Python Programming
+                        </span>
+
+                        <span>4</span>
+
+                        <span>86</span>
+
+                        <span class="grade">A+</span>
+
+                        <span>9</span>
+
+                        <span class="subject-pass">
+                            Pass
+                        </span>
+
+                    </div>
+
+
+                    <!-- Subject 2 -->
+                    <div class="result-row">
+
+                        <span class="result-subject">
+                            Web Technologies
+                        </span>
+
+                        <span>4</span>
+
+                        <span>82</span>
+
+                        <span class="grade">A</span>
+
+                        <span>8</span>
+
+                        <span class="subject-pass">
+                            Pass
+                        </span>
+
+                    </div>
+
+
+                    <!-- Subject 3 -->
+                    <div class="result-row">
+
+                        <span class="result-subject">
+                            Database Management
+                        </span>
+
+                        <span>4</span>
+
+                        <span>79</span>
+
+                        <span class="grade">A</span>
+
+                        <span>8</span>
+
+                        <span class="subject-pass">
+                            Pass
+                        </span>
+
+                    </div>
+
+
+                    <!-- Subject 4 -->
+                    <div class="result-row">
+
+                        <span class="result-subject">
+                            Data Structures
+                        </span>
+
+                        <span>4</span>
+
+                        <span>75</span>
+
+                        <span class="grade">B+</span>
+
+                        <span>7</span>
+
+                        <span class="subject-pass">
+                            Pass
+                        </span>
+
+                    </div>
+
+
+                    <!-- Subject 5 -->
+                    <div class="result-row">
+
+                        <span class="result-subject">
+                            Cloud Computing
+                        </span>
+
+                        <span>4</span>
+
+                        <span>88</span>
+
+                        <span class="grade">A+</span>
+
+                        <span>9</span>
+
+                        <span class="subject-pass">
+                            Pass
+                        </span>
+
+                    </div>
+
+
+                    <!-- Subject 6 -->
+                    <div class="result-row">
+
+                        <span class="result-subject">
+                            Artificial Intelligence
+                        </span>
+
+                        <span>4</span>
+
+                        <span>81</span>
+
+                        <span class="grade">A</span>
+
+                        <span>8</span>
+
+                        <span class="subject-pass">
+                            Pass
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Semester History -->
+            <div class="semester-history">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Semester History</h2>
+                        <p>Your previous academic performance.</p>
+                    </div>
+                </div>
+
+
+                <div class="history-grid">
+
+                    <div class="history-card">
+                        <span>Semester 5</span>
+                        <strong>8.1 SGPA</strong>
+                        <small>CGPA: 8.1</small>
+                    </div>
+
+                    <div class="history-card">
+                        <span>Semester 4</span>
+                        <strong>8.3 SGPA</strong>
+                        <small>CGPA: 8.1</small>
+                    </div>
+
+                    <div class="history-card">
+                        <span>Semester 3</span>
+                        <strong>7.9 SGPA</strong>
+                        <small>CGPA: 8.0</small>
+                    </div>
+
+                    <div class="history-card">
+                        <span>Semester 2</span>
+                        <strong>8.0 SGPA</strong>
+                        <small>CGPA: 8.0</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

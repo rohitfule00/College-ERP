@@ -1,0 +1,226 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+        <div class="settings-page">
+
+            <!-- Page Header -->
+            <div class="settings-header">
+                <div>
+                    <h1>Settings</h1>
+                    <p>Manage your account and student portal preferences.</p>
+                </div>
+            </div>
+
+
+            <!-- Account Settings -->
+            <div class="settings-section">
+
+                <div class="settings-section-header">
+                    <div class="settings-section-icon">👤</div>
+                    <div>
+                        <h2>Account Information</h2>
+                        <p>Manage your personal account details.</p>
+                    </div>
+                </div>
+
+                <div class="settings-form">
+
+                    <div class="settings-field">
+                        <label>Full Name</label>
+                        <input type="text" value="Rohit Bharat Fule">
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Email Address</label>
+                        <input type="email" value="rohit@example.com">
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Student ID</label>
+                        <input type="text" value="STU2026001" readonly>
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Course</label>
+                        <input type="text" value="B.Tech Computer Science" readonly>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Notification Settings -->
+            <div class="settings-section">
+
+                <div class="settings-section-header">
+                    <div class="settings-section-icon">🔔</div>
+
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Choose which notifications you want to receive.</p>
+                    </div>
+                </div>
+
+
+                <div class="settings-options">
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Assignment Notifications</h3>
+                            <p>Receive notifications about new assignments and deadlines.</p>
+                        </div>
+
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Attendance Alerts</h3>
+                            <p>Get notified when your attendance percentage is low.</p>
+                        </div>
+
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Result Notifications</h3>
+                            <p>Receive notifications when examination results are published.</p>
+                        </div>
+
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>College Announcements</h3>
+                            <p>Receive important college announcements and notices.</p>
+                        </div>
+
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Security -->
+            <div class="settings-section">
+
+                <div class="settings-section-header">
+                    <div class="settings-section-icon">🔒</div>
+
+                    <div>
+                        <h2>Security</h2>
+                        <p>Manage your password and account security.</p>
+                    </div>
+                </div>
+
+
+                <div class="security-content">
+
+                    <div class="security-info">
+                        <h3>Password</h3>
+                        <p>Last changed 30 days ago.</p>
+                    </div>
+
+                    <button class="change-password-button">
+                        Change Password
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Preferences -->
+            <div class="settings-section">
+
+                <div class="settings-section-header">
+                    <div class="settings-section-icon">⚙️</div>
+
+                    <div>
+                        <h2>Preferences</h2>
+                        <p>Customize your student portal experience.</p>
+                    </div>
+                </div>
+
+
+                <div class="settings-form">
+
+                    <div class="settings-field">
+
+                        <label for="language">Language</label>
+
+                        <select id="language">
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Marathi</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="settings-field">
+
+                        <label for="theme">Theme</label>
+
+                        <select id="theme">
+                            <option>Light</option>
+                            <option>Dark</option>
+                            <option>System Default</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Save Settings -->
+            <div class="settings-actions">
+
+                <button class="cancel-button">
+                    Cancel
+                </button>
+
+                <button class="save-settings-button">
+                    Save Settings
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

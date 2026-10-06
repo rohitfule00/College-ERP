@@ -1,0 +1,246 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+        <div class="profile-page">
+
+            <!-- Page Header -->
+            <div class="profile-page-header">
+                <div>
+                    <h1>My Profile</h1>
+                    <p>View and manage your personal and academic information.</p>
+                </div>
+
+                <button class="edit-profile-btn">
+                    ✏️ Edit Profile
+                </button>
+            </div>
+
+
+            <!-- Profile Layout -->
+            <div class="profile-layout">
+
+                <!-- Left Profile Card -->
+                <div class="profile-card">
+
+                    <div class="profile-cover"></div>
+
+                    <div class="profile-photo">
+                        👤
+                    </div>
+
+                    <div class="profile-basic-info">
+
+                        <h2>Rohit Bharat Fule</h2>
+
+                        <p class="student-id">
+                            Student ID: STU2025001
+                        </p>
+
+                        <span class="profile-status">
+                            ● Active Student
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <div class="profile-detail">
+                            <span>🎓</span>
+                            <div>
+                                <small>Course</small>
+                                <strong>B.Tech</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-detail">
+                            <span>💻</span>
+                            <div>
+                                <small>Branch</small>
+                                <strong>AI & Data Science</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-detail">
+                            <span>📅</span>
+                            <div>
+                                <small>Year</small>
+                                <strong>3rd Year</strong>
+                            </div>
+                        </div>
+
+                        <div class="profile-detail">
+                            <span>🏫</span>
+                            <div>
+                                <small>College</small>
+                                <strong>TPCT'S College of Engineering</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right Side -->
+                <div class="profile-information">
+
+
+                    <!-- Personal Information -->
+                    <section class="profile-section">
+
+                        <div class="profile-section-header">
+
+                            <div>
+                                <span class="profile-section-icon">👤</span>
+                                <h2>Personal Information</h2>
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-info-grid">
+
+                            <div class="profile-info-item">
+                                <small>Full Name</small>
+                                <strong>Rohit Bharat Fule</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Date of Birth</small>
+                                <strong>15 June 2005</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Gender</small>
+                                <strong>Male</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Father's Name</small>
+                                <strong>Bharat Fule</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Mother's Name</small>
+                                <strong>Mother Name</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Nationality</small>
+                                <strong>Indian</strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Academic Information -->
+                    <section class="profile-section">
+
+                        <div class="profile-section-header">
+
+                            <div>
+                                <span class="profile-section-icon">🎓</span>
+                                <h2>Academic Information</h2>
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-info-grid">
+
+                            <div class="profile-info-item">
+                                <small>Course</small>
+                                <strong>B.Tech</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Branch</small>
+                                <strong>AI & Data Science</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Current Year</small>
+                                <strong>3rd Year</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Semester</small>
+                                <strong>6th Semester</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>College</small>
+                                <strong>TPCT'S College of Engineering</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Graduation Year</small>
+                                <strong>2027</strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Contact Information -->
+                    <section class="profile-section">
+
+                        <div class="profile-section-header">
+
+                            <div>
+                                <span class="profile-section-icon">📞</span>
+                                <h2>Contact Information</h2>
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-info-grid">
+
+                            <div class="profile-info-item">
+                                <small>Email</small>
+                                <strong>student@example.com</strong>
+                            </div>
+
+                            <div class="profile-info-item">
+                                <small>Mobile Number</small>
+                                <strong>+91 9876543210</strong>
+                            </div>
+
+                            <div class="profile-info-item profile-address">
+                                <small>Address</small>
+                                <strong>
+                                    Pune, Maharashtra, India
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

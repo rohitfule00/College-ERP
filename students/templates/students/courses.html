@@ -1,0 +1,327 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+        <div class="courses-page">
+
+            <!-- Page Header -->
+            <div class="courses-header">
+                <div>
+                    <h1>My Courses</h1>
+                    <p>View and manage your enrolled courses.</p>
+                </div>
+            </div>
+
+
+            <!-- Course Summary -->
+            <div class="course-summary">
+
+                <div class="summary-card">
+                    <div class="summary-icon">📚</div>
+                    <div>
+                        <small>Total Courses</small>
+                        <h2>6</h2>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon">🎓</div>
+                    <div>
+                        <small>Current Semester</small>
+                        <h2>6th</h2>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon">⭐</div>
+                    <div>
+                        <small>Total Credits</small>
+                        <h2>24</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Courses -->
+            <div class="courses-section">
+
+                <div class="section-heading">
+                    <h2>Enrolled Courses</h2>
+                    <span>6 Courses</span>
+                </div>
+
+
+                <div class="courses-grid">
+
+                    <!-- Course 1 -->
+                    <div class="course-card">
+
+                        <div class="course-card-top">
+                            <div class="course-icon">🐍</div>
+
+                            <span class="course-status">
+                                In Progress
+                            </span>
+                        </div>
+
+                        <h3>Python Programming</h3>
+
+                        <p class="course-code">
+                            CS601
+                        </p>
+
+                        <div class="course-info">
+                            <span>👨‍🏫 Prof. Sharma</span>
+                            <span>🎓 4 Credits</span>
+                        </div>
+
+                        <div class="course-progress">
+
+                            <div class="progress-header">
+                                <span>Course Progress</span>
+                                <strong>80%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width: 80%;"></div>
+                            </div>
+
+                        </div>
+
+                        <button class="course-button">
+                            View Details →
+                        </button>
+
+                    </div>
+
+
+                    <!-- Course 2 -->
+                    <div class="course-card">
+
+                        <div class="course-card-top">
+                            <div class="course-icon">🌐</div>
+
+                            <span class="course-status">
+                                In Progress
+                            </span>
+                        </div>
+
+                        <h3>Web Technologies</h3>
+
+                        <p class="course-code">
+                            CS602
+                        </p>
+
+                        <div class="course-info">
+                            <span>👨‍🏫 Prof. Patil</span>
+                            <span>🎓 4 Credits</span>
+                        </div>
+
+                        <div class="course-progress">
+
+                            <div class="progress-header">
+                                <span>Course Progress</span>
+                                <strong>65%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width: 65%;"></div>
+                            </div>
+
+                        </div>
+
+                        <button class="course-button">
+                            View Details →
+                        </button>
+
+                    </div>
+
+
+                    <!-- Course 3 -->
+                    <div class="course-card">
+
+                        <div class="course-card-top">
+                            <div class="course-icon">🗄️</div>
+
+                            <span class="course-status">
+                                In Progress
+                            </span>
+                        </div>
+
+                        <h3>Database Management</h3>
+
+                        <p class="course-code">
+                            CS603
+                        </p>
+
+                        <div class="course-info">
+                            <span>👨‍🏫 Prof. Joshi</span>
+                            <span>🎓 4 Credits</span>
+                        </div>
+
+                        <div class="course-progress">
+
+                            <div class="progress-header">
+                                <span>Course Progress</span>
+                                <strong>55%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width: 55%;"></div>
+                            </div>
+
+                        </div>
+
+                        <button class="course-button">
+                            View Details →
+                        </button>
+
+                    </div>
+
+
+                    <!-- Course 4 -->
+                    <div class="course-card">
+
+                        <div class="course-card-top">
+                            <div class="course-icon">⚙️</div>
+
+                            <span class="course-status">
+                                In Progress
+                            </span>
+                        </div>
+
+                        <h3>Data Structures</h3>
+
+                        <p class="course-code">
+                            CS604
+                        </p>
+
+                        <div class="course-info">
+                            <span>👨‍🏫 Prof. Kulkarni</span>
+                            <span>🎓 4 Credits</span>
+                        </div>
+
+                        <div class="course-progress">
+
+                            <div class="progress-header">
+                                <span>Course Progress</span>
+                                <strong>75%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width: 75%;"></div>
+                            </div>
+
+                        </div>
+
+                        <button class="course-button">
+                            View Details →
+                        </button>
+
+                    </div>
+
+
+                    <!-- Course 5 -->
+                    <div class="course-card">
+
+                        <div class="course-card-top">
+                            <div class="course-icon">☁️</div>
+
+                            <span class="course-status">
+                                In Progress
+                            </span>
+                        </div>
+
+                        <h3>Cloud Computing</h3>
+
+                        <p class="course-code">
+                            CS605
+                        </p>
+
+                        <div class="course-info">
+                            <span>👨‍🏫 Prof. Deshmukh</span>
+                            <span>🎓 4 Credits</span>
+                        </div>
+
+                        <div class="course-progress">
+
+                            <div class="progress-header">
+                                <span>Course Progress</span>
+                                <strong>60%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width: 60%;"></div>
+                            </div>
+
+                        </div>
+
+                        <button class="course-button">
+                            View Details →
+                        </button>
+
+                    </div>
+
+
+                    <!-- Course 6 -->
+                    <div class="course-card">
+
+                        <div class="course-card-top">
+                            <div class="course-icon">🤖</div>
+
+                            <span class="course-status">
+                                In Progress
+                            </span>
+                        </div>
+
+                        <h3>Artificial Intelligence</h3>
+
+                        <p class="course-code">
+                            CS606
+                        </p>
+
+                        <div class="course-info">
+                            <span>👨‍🏫 Prof. More</span>
+                            <span>🎓 4 Credits</span>
+                        </div>
+
+                        <div class="course-progress">
+
+                            <div class="progress-header">
+                                <span>Course Progress</span>
+                                <strong>45%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width: 45%;"></div>
+                            </div>
+
+                        </div>
+
+                        <button class="course-button">
+                            View Details →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

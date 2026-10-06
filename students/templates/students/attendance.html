@@ -1,0 +1,324 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+        <div class="attendance-page">
+
+            <!-- Page Header -->
+            <div class="attendance-header">
+                <div>
+                    <h1>Attendance</h1>
+                    <p>Track your attendance and class participation.</p>
+                </div>
+            </div>
+
+
+            <!-- Attendance Summary -->
+            <div class="attendance-summary">
+
+                <div class="attendance-card">
+                    <div class="attendance-card-icon">📊</div>
+                    <div>
+                        <small>Overall Attendance</small>
+                        <h2>87%</h2>
+                    </div>
+                </div>
+
+                <div class="attendance-card">
+                    <div class="attendance-card-icon">✅</div>
+                    <div>
+                        <small>Present</small>
+                        <h2>124</h2>
+                    </div>
+                </div>
+
+                <div class="attendance-card">
+                    <div class="attendance-card-icon">❌</div>
+                    <div>
+                        <small>Absent</small>
+                        <h2>18</h2>
+                    </div>
+                </div>
+
+                <div class="attendance-card">
+                    <div class="attendance-card-icon">📚</div>
+                    <div>
+                        <small>Total Classes</small>
+                        <h2>142</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Overall Attendance -->
+            <div class="attendance-overview">
+
+                <div class="section-heading">
+                    <h2>Attendance Overview</h2>
+                </div>
+
+                <div class="attendance-overview-content">
+
+                    <div class="attendance-circle">
+                        <strong>87%</strong>
+                        <span>Overall</span>
+                    </div>
+
+                    <div class="attendance-overview-info">
+
+                        <h3>Good Attendance</h3>
+
+                        <p>
+                            Your overall attendance is above the required
+                            attendance percentage.
+                        </p>
+
+                        <div class="attendance-progress">
+                            <div class="attendance-progress-bar">
+                                <div style="width: 87%;"></div>
+                            </div>
+
+                            <span>87%</span>
+                        </div>
+
+                        <small>
+                            Required attendance: 75%
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Subject-wise Attendance -->
+            <div class="attendance-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Subject-wise Attendance</h2>
+                        <p>Attendance details for each subject.</p>
+                    </div>
+                </div>
+
+
+                <div class="attendance-table">
+
+                    <!-- Table Header -->
+                    <div class="attendance-table-header">
+
+                        <span>Subject</span>
+                        <span>Total Classes</span>
+                        <span>Present</span>
+                        <span>Absent</span>
+                        <span>Attendance</span>
+                        <span>Status</span>
+
+                    </div>
+
+
+                    <!-- Python -->
+                    <div class="attendance-row">
+
+                        <span class="subject-name">
+                            Python Programming
+                        </span>
+
+                        <span>30</span>
+
+                        <span>28</span>
+
+                        <span>2</span>
+
+                        <span class="attendance-percentage">
+                            93%
+                        </span>
+
+                        <span class="attendance-status good">
+                            Good
+                        </span>
+
+                    </div>
+
+
+                    <!-- Web Technologies -->
+                    <div class="attendance-row">
+
+                        <span class="subject-name">
+                            Web Technologies
+                        </span>
+
+                        <span>28</span>
+
+                        <span>24</span>
+
+                        <span>4</span>
+
+                        <span class="attendance-percentage">
+                            86%
+                        </span>
+
+                        <span class="attendance-status good">
+                            Good
+                        </span>
+
+                    </div>
+
+
+                    <!-- Database -->
+                    <div class="attendance-row">
+
+                        <span class="subject-name">
+                            Database Management
+                        </span>
+
+                        <span>25</span>
+
+                        <span>21</span>
+
+                        <span>4</span>
+
+                        <span class="attendance-percentage">
+                            84%
+                        </span>
+
+                        <span class="attendance-status good">
+                            Good
+                        </span>
+
+                    </div>
+
+
+                    <!-- Data Structures -->
+                    <div class="attendance-row">
+
+                        <span class="subject-name">
+                            Data Structures
+                        </span>
+
+                        <span>30</span>
+
+                        <span>24</span>
+
+                        <span>6</span>
+
+                        <span class="attendance-percentage">
+                            80%
+                        </span>
+
+                        <span class="attendance-status warning">
+                            Warning
+                        </span>
+
+                    </div>
+
+
+                    <!-- Cloud Computing -->
+                    <div class="attendance-row">
+
+                        <span class="subject-name">
+                            Cloud Computing
+                        </span>
+
+                        <span>20</span>
+
+                        <span>18</span>
+
+                        <span>2</span>
+
+                        <span class="attendance-percentage">
+                            90%
+                        </span>
+
+                        <span class="attendance-status good">
+                            Good
+                        </span>
+
+                    </div>
+
+
+                    <!-- Artificial Intelligence -->
+                    <div class="attendance-row">
+
+                        <span class="subject-name">
+                            Artificial Intelligence
+                        </span>
+
+                        <span>18</span>
+
+                        <span>15</span>
+
+                        <span>3</span>
+
+                        <span class="attendance-percentage">
+                            83%
+                        </span>
+
+                        <span class="attendance-status good">
+                            Good
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Monthly Attendance -->
+            <div class="monthly-attendance">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Monthly Attendance</h2>
+                        <p>Your attendance performance by month.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="monthly-grid">
+
+                    <div class="month-card">
+                        <span>January</span>
+                        <strong>89%</strong>
+                    </div>
+
+                    <div class="month-card">
+                        <span>February</span>
+                        <strong>91%</strong>
+                    </div>
+
+                    <div class="month-card">
+                        <span>March</span>
+                        <strong>85%</strong>
+                    </div>
+
+                    <div class="month-card">
+                        <span>April</span>
+                        <strong>87%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

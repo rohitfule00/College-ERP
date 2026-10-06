@@ -1,0 +1,316 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+
+        <div class="assignments-page">
+
+            <!-- Page Header -->
+            <div class="assignments-header">
+                <div>
+                    <h1>Assignments</h1>
+                    <p>View and manage your assignments and deadlines.</p>
+                </div>
+            </div>
+
+
+            <!-- Summary Cards -->
+            <div class="assignment-summary">
+
+                <div class="assignment-card">
+                    <div class="assignment-icon">📚</div>
+                    <div>
+                        <small>Total Assignments</small>
+                        <h2>12</h2>
+                    </div>
+                </div>
+
+                <div class="assignment-card">
+                    <div class="assignment-icon">⏳</div>
+                    <div>
+                        <small>Pending</small>
+                        <h2>4</h2>
+                    </div>
+                </div>
+
+                <div class="assignment-card">
+                    <div class="assignment-icon">✅</div>
+                    <div>
+                        <small>Submitted</small>
+                        <h2>7</h2>
+                    </div>
+                </div>
+
+                <div class="assignment-card">
+                    <div class="assignment-icon">⚠️</div>
+                    <div>
+                        <small>Overdue</small>
+                        <h2>1</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Assignment List -->
+            <div class="assignment-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>My Assignments</h2>
+                        <p>Keep track of your assignment submissions.</p>
+                    </div>
+
+                    <span>12 Assignments</span>
+
+                </div>
+
+
+                <!-- Assignment 1 -->
+                <div class="assignment-row">
+
+                    <div class="assignment-subject-icon">
+                        🐍
+                    </div>
+
+                    <div class="assignment-details">
+                        <h3>Python Programming Assignment</h3>
+                        <p>Python Programming • Prof. Sharma</p>
+                    </div>
+
+                    <div class="assignment-date">
+                        <small>Due Date</small>
+                        <strong>08 Oct 2026</strong>
+                    </div>
+
+                    <span class="assignment-status pending">
+                        Pending
+                    </span>
+
+                    <button class="assignment-action">
+                        View
+                    </button>
+
+                </div>
+
+
+                <!-- Assignment 2 -->
+                <div class="assignment-row">
+
+                    <div class="assignment-subject-icon">
+                        🌐
+                    </div>
+
+                    <div class="assignment-details">
+                        <h3>Web Development Project</h3>
+                        <p>Web Technologies • Prof. Patil</p>
+                    </div>
+
+                    <div class="assignment-date">
+                        <small>Due Date</small>
+                        <strong>10 Oct 2026</strong>
+                    </div>
+
+                    <span class="assignment-status pending">
+                        Pending
+                    </span>
+
+                    <button class="assignment-action">
+                        View
+                    </button>
+
+                </div>
+
+
+                <!-- Assignment 3 -->
+                <div class="assignment-row">
+
+                    <div class="assignment-subject-icon">
+                        🗄️
+                    </div>
+
+                    <div class="assignment-details">
+                        <h3>Database SQL Queries</h3>
+                        <p>Database Management • Prof. Joshi</p>
+                    </div>
+
+                    <div class="assignment-date">
+                        <small>Due Date</small>
+                        <strong>05 Oct 2026</strong>
+                    </div>
+
+                    <span class="assignment-status submitted">
+                        Submitted
+                    </span>
+
+                    <button class="assignment-action">
+                        View
+                    </button>
+
+                </div>
+
+
+                <!-- Assignment 4 -->
+                <div class="assignment-row">
+
+                    <div class="assignment-subject-icon">
+                        ⚙️
+                    </div>
+
+                    <div class="assignment-details">
+                        <h3>Data Structures Lab</h3>
+                        <p>Data Structures • Prof. Kulkarni</p>
+                    </div>
+
+                    <div class="assignment-date">
+                        <small>Due Date</small>
+                        <strong>02 Oct 2026</strong>
+                    </div>
+
+                    <span class="assignment-status overdue">
+                        Overdue
+                    </span>
+
+                    <button class="assignment-action">
+                        View
+                    </button>
+
+                </div>
+
+
+                <!-- Assignment 5 -->
+                <div class="assignment-row">
+
+                    <div class="assignment-subject-icon">
+                        ☁️
+                    </div>
+
+                    <div class="assignment-details">
+                        <h3>Cloud Computing Report</h3>
+                        <p>Cloud Computing • Prof. Deshmukh</p>
+                    </div>
+
+                    <div class="assignment-date">
+                        <small>Due Date</small>
+                        <strong>15 Oct 2026</strong>
+                    </div>
+
+                    <span class="assignment-status pending">
+                        Pending
+                    </span>
+
+                    <button class="assignment-action">
+                        View
+                    </button>
+
+                </div>
+
+
+                <!-- Assignment 6 -->
+                <div class="assignment-row">
+
+                    <div class="assignment-subject-icon">
+                        🤖
+                    </div>
+
+                    <div class="assignment-details">
+                        <h3>AI Research Assignment</h3>
+                        <p>Artificial Intelligence • Prof. More</p>
+                    </div>
+
+                    <div class="assignment-date">
+                        <small>Due Date</small>
+                        <strong>18 Oct 2026</strong>
+                    </div>
+
+                    <span class="assignment-status submitted">
+                        Submitted
+                    </span>
+
+                    <button class="assignment-action">
+                        View
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Upcoming Assignments -->
+            <div class="upcoming-assignments">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Upcoming Deadlines</h2>
+                        <p>Don't miss your upcoming submissions.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="deadline-list">
+
+                    <div class="deadline-item">
+
+                        <div class="deadline-date">
+                            <strong>08</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+                            <h3>Python Programming Assignment</h3>
+                            <p>Due in 3 days</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="deadline-item">
+
+                        <div class="deadline-date">
+                            <strong>10</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+                            <h3>Web Development Project</h3>
+                            <p>Due in 5 days</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="deadline-item">
+
+                        <div class="deadline-date">
+                            <strong>15</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+                            <h3>Cloud Computing Report</h3>
+                            <p>Due in 10 days</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

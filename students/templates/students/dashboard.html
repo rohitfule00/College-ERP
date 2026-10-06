@@ -1,0 +1,159 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+        <main class="dashboard-content">
+            <section class="welcome-section">
+                <div class="welcome-avatar">👨🏻‍🎓</div>
+                <div class="welcome-text">
+                    <h1>Welcome back, Rohit! <span>👋</span></h1>
+                    <p>Here's what's happening with your college life today.</p>
+                    <div class="student-meta">
+                        <span>🎓 <strong>B.Tech (ETC)</strong><small>Course</small></span>
+                        <span>🏛️ <strong>Electronics &amp; Telecommunication</strong><small>Department</small></span>
+                        <span>▣ <strong>2025-28</strong><small>Batch</small></span>
+                    </div>
+                </div>
+                <div class="welcome-note"><strong>Small steps every day<br>lead to big results.</strong><small>— Keep
+                        going!</small></div>
+            </section>
+
+            <section class="dashboard-cards">
+                <div class="dashboard-card blue-card">
+                    <div class="card-icon">👥</div>
+                    <div class="card-info"><span>Attendance</span>
+                        <h2>87%</h2>
+                        <p><b>↑ 5%</b> than last month</p>
+                    </div><i>›</i>
+                </div>
+                <div class="dashboard-card green-card">
+                    <div class="card-icon">📖</div>
+                    <div class="card-info"><span>Courses</span>
+                        <h2>6</h2>
+                        <p>Enrolled Subjects</p>
+                    </div><i>›</i>
+                </div>
+                <div class="dashboard-card orange-card">
+                    <div class="card-icon">📄</div>
+                    <div class="card-info"><span>Assignments</span>
+                        <h2>3</h2>
+                        <p>Pending Submission</p>
+                    </div><i>›</i>
+                </div>
+                <div class="dashboard-card purple-card">
+                    <div class="card-icon">₹</div>
+                    <div class="card-info"><span>Fees</span>
+                        <h2>₹ 12,500</h2>
+                        <p>Paid this semester</p>
+                    </div><i>›</i>
+                </div>
+            </section>
+
+            <div class="dashboard-two-column">
+                <section class="panel upcoming-classes">
+                    <div class="section-title">
+                        <div><span class="section-icon">▣</span>
+                            <h2>Upcoming Classes</h2>
+                        </div><a href="#">View All</a>
+                    </div>
+                    <div class="classes-table">
+                        <div class="table-header">
+                            <span>Time</span><span>Subject</span><span>Room</span><span>Status</span></div>
+                        <div class="class-row"><span class="class-time"><b class="time-dot blue"></b>10:00 AM - 11:00
+                                AM</span><strong>Python Programming</strong><span>Room 204</span><em
+                                class="status upcoming">Upcoming</em></div>
+                        <div class="class-row"><span class="class-time"><b class="time-dot green"></b>12:00 PM - 01:00
+                                PM</span><strong>Django Framework</strong><span>Lab 2</span><em
+                                class="status upcoming">Upcoming</em></div>
+                        <div class="class-row"><span class="class-time"><b class="time-dot blue"></b>02:00 PM - 03:00
+                                PM</span><strong>Data Structures</strong><span>Room 301</span><em
+                                class="status today">Today</em></div>
+                        <div class="class-row"><span class="class-time"><b class="time-dot green"></b>04:00 PM - 05:00
+                                PM</span><strong>Web Technologies</strong><span>Lab 1</span><em
+                                class="status upcoming">Upcoming</em></div>
+                    </div>
+                </section>
+
+                <section class="panel announcements">
+                    <div class="section-title">
+                        <div><span class="section-icon">📢</span>
+                            <h2>Recent Announcements</h2>
+                        </div><a href="#">View All</a>
+                    </div>
+                    <div class="announcement-list">
+                        <div class="announcement-item">
+                            <div class="announcement-icon red">▣</div>
+                            <div class="announcement-content">
+                                <h3>Semester Exam Timetable Released</h3>
+                                <p>The final semester exam timetable has been released. Please check the official notice
+                                    board for details.</p>
+                            </div>
+                            <div class="announcement-date">12 Apr 2025<br>10:30 AM</div>
+                        </div>
+                        <div class="announcement-item">
+                            <div class="announcement-icon blue">▣</div>
+                            <div class="announcement-content">
+                                <h3>Assignment Submission Deadline</h3>
+                                <p>The last date for submitting Python assignment is 18 April 2025. Submit before the
+                                    deadline.</p>
+                            </div>
+                            <div class="announcement-date">10 Apr 2025<br>02:15 PM</div>
+                        </div>
+                        <div class="announcement-item">
+                            <div class="announcement-icon green">◆</div>
+                            <div class="announcement-content">
+                                <h3>College Annual Fest</h3>
+                                <p>The college annual fest will be held on 25 April 2025. All students are requested to
+                                    participate.</p>
+                            </div>
+                            <div class="announcement-date">08 Apr 2025<br>11:45 AM</div>
+                        </div>
+                        <div class="announcement-item">
+                            <div class="announcement-icon purple">▣</div>
+                            <div class="announcement-content">
+                                <h3>Library Timing Update</h3>
+                                <p>The library will remain open from 8:00 AM to 8:00 PM during examination week.</p>
+                            </div>
+                            <div class="announcement-date">05 Apr 2025<br>09:20 AM</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="panel quick-links">
+                <div class="section-title">
+                    <div><span class="section-icon">🔗</span>
+                        <h2>Quick Links</h2>
+                    </div>
+                </div>
+                <div class="quick-links-grid">
+                    <a href="#" class="quick-link-card"><span class="quick-link-icon blue">▣</span><strong>View
+                            Timetable</strong></a>
+                    <a href="#" class="quick-link-card"><span class="quick-link-icon green">▥</span><strong>Check
+                            Attendance</strong></a>
+                    <a href="#" class="quick-link-card"><span class="quick-link-icon purple">▤</span><strong>View
+                            Results</strong></a>
+                    <a href="#" class="quick-link-card"><span class="quick-link-icon orange">₹</span><strong>Pay
+                            Fees</strong></a>
+                </div>
+            </section>
+
+            <section class="motivation-banner">
+                <div><strong>Your hard work today<br>builds your tomorrow.</strong><a href="#">Keep Going →</a></div>
+                <span>🏔️</span>
+            </section>
+        </main>
+    </div>
+</div>
+
+{% endblock %}

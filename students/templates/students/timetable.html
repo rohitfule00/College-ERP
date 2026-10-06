@@ -1,0 +1,320 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'students/css/student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="student-shell">
+    {% include "students/student_nav.html" %}
+    <div class="student-layout">
+        {% include "students/student_sidebar.html" %}
+        <div class="timetable-page">
+
+            <!-- Page Header -->
+            <div class="timetable-header">
+
+                <div>
+                    <h1>My Timetable</h1>
+                    <p>View your weekly class schedule.</p>
+                </div>
+
+                <div class="timetable-week">
+                    <button>←</button>
+                    <span>October 2026</span>
+                    <button>→</button>
+                </div>
+
+            </div>
+
+
+            <!-- Day Navigation -->
+            <div class="day-navigation">
+
+                <div class="day active">
+                    <span>MON</span>
+                    <strong>05</strong>
+                </div>
+
+                <div class="day">
+                    <span>TUE</span>
+                    <strong>06</strong>
+                </div>
+
+                <div class="day">
+                    <span>WED</span>
+                    <strong>07</strong>
+                </div>
+
+                <div class="day">
+                    <span>THU</span>
+                    <strong>08</strong>
+                </div>
+
+                <div class="day">
+                    <span>FRI</span>
+                    <strong>09</strong>
+                </div>
+
+                <div class="day">
+                    <span>SAT</span>
+                    <strong>10</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Today's Schedule -->
+            <div class="schedule-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Monday, 5 October</h2>
+                        <p>Today's class schedule</p>
+                    </div>
+
+                    <span>6 Classes</span>
+
+                </div>
+
+
+                <!-- Class 1 -->
+                <div class="class-row">
+
+                    <div class="class-time">
+                        <strong>09:00</strong>
+                        <span>10:00 AM</span>
+                    </div>
+
+                    <div class="class-indicator"></div>
+
+                    <div class="class-details">
+
+                        <div class="class-icon">🐍</div>
+
+                        <div>
+                            <h3>Python Programming</h3>
+                            <p>Prof. Sharma</p>
+                        </div>
+
+                    </div>
+
+                    <div class="class-room">
+                        <span>Room</span>
+                        <strong>Lab 101</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Class 2 -->
+                <div class="class-row">
+
+                    <div class="class-time">
+                        <strong>10:00</strong>
+                        <span>11:00 AM</span>
+                    </div>
+
+                    <div class="class-indicator"></div>
+
+                    <div class="class-details">
+
+                        <div class="class-icon">🌐</div>
+
+                        <div>
+                            <h3>Web Technologies</h3>
+                            <p>Prof. Patil</p>
+                        </div>
+
+                    </div>
+
+                    <div class="class-room">
+                        <span>Room</span>
+                        <strong>Room 204</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Break -->
+                <div class="break-row">
+
+                    <span>☕</span>
+
+                    <strong>Short Break</strong>
+
+                    <small>11:00 AM - 11:15 AM</small>
+
+                </div>
+
+
+                <!-- Class 3 -->
+                <div class="class-row current-class">
+
+                    <div class="class-time">
+                        <strong>11:15</strong>
+                        <span>12:15 PM</span>
+                    </div>
+
+                    <div class="class-indicator"></div>
+
+                    <div class="class-details">
+
+                        <div class="class-icon">🗄️</div>
+
+                        <div>
+                            <h3>Database Management</h3>
+                            <p>Prof. Joshi</p>
+                        </div>
+
+                    </div>
+
+                    <div class="class-room">
+                        <span>Room</span>
+                        <strong>Lab 203</strong>
+                    </div>
+
+                    <span class="current-label">Current</span>
+
+                </div>
+
+
+                <!-- Class 4 -->
+                <div class="class-row">
+
+                    <div class="class-time">
+                        <strong>12:15</strong>
+                        <span>01:15 PM</span>
+                    </div>
+
+                    <div class="class-indicator"></div>
+
+                    <div class="class-details">
+
+                        <div class="class-icon">⚙️</div>
+
+                        <div>
+                            <h3>Data Structures</h3>
+                            <p>Prof. Kulkarni</p>
+                        </div>
+
+                    </div>
+
+                    <div class="class-room">
+                        <span>Room</span>
+                        <strong>Room 305</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Lunch Break -->
+                <div class="break-row lunch-break">
+
+                    <span>🍽️</span>
+
+                    <strong>Lunch Break</strong>
+
+                    <small>01:15 PM - 02:00 PM</small>
+
+                </div>
+
+
+                <!-- Class 5 -->
+                <div class="class-row">
+
+                    <div class="class-time">
+                        <strong>02:00</strong>
+                        <span>03:00 PM</span>
+                    </div>
+
+                    <div class="class-indicator"></div>
+
+                    <div class="class-details">
+
+                        <div class="class-icon">☁️</div>
+
+                        <div>
+                            <h3>Cloud Computing</h3>
+                            <p>Prof. Deshmukh</p>
+                        </div>
+
+                    </div>
+
+                    <div class="class-room">
+                        <span>Room</span>
+                        <strong>Room 201</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Class 6 -->
+                <div class="class-row">
+
+                    <div class="class-time">
+                        <strong>03:00</strong>
+                        <span>04:00 PM</span>
+                    </div>
+
+                    <div class="class-indicator"></div>
+
+                    <div class="class-details">
+
+                        <div class="class-icon">🤖</div>
+
+                        <div>
+                            <h3>Artificial Intelligence</h3>
+                            <p>Prof. More</p>
+                        </div>
+
+                    </div>
+
+                    <div class="class-room">
+                        <span>Room</span>
+                        <strong>Lab 302</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Weekly Summary -->
+            <div class="timetable-summary">
+
+                <div class="summary-item">
+                    <span>📚</span>
+                    <div>
+                        <small>Total Classes</small>
+                        <strong>30</strong>
+                    </div>
+                </div>
+
+                <div class="summary-item">
+                    <span>⏰</span>
+                    <div>
+                        <small>Class Hours</small>
+                        <strong>30 Hours</strong>
+                    </div>
+                </div>
+
+                <div class="summary-item">
+                    <span>🏫</span>
+                    <div>
+                        <small>Working Days</small>
+                        <strong>6 Days</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
