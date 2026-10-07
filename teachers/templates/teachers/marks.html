@@ -1,0 +1,371 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Marks{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="marks-page">
+
+                <!-- Page Header -->
+                <div class="page-header">
+
+                    <div>
+                        <h1>Marks / Grades</h1>
+                        <p>Enter and manage student marks and grades</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        Save Marks
+                    </button>
+
+                </div>
+
+
+                <!-- Selection Controls -->
+                <div class="marks-controls">
+
+                    <div class="marks-control">
+                        <label>Class</label>
+
+                        <select>
+                            <option>B.Tech CSE - 3rd Semester</option>
+                            <option>B.Tech AI - 5th Semester</option>
+                            <option>B.Tech CSE - 4th Semester</option>
+                        </select>
+                    </div>
+
+                    <div class="marks-control">
+                        <label>Subject</label>
+
+                        <select>
+                            <option>Python Programming</option>
+                            <option>Django Development</option>
+                            <option>Database Management</option>
+                        </select>
+                    </div>
+
+                    <div class="marks-control">
+                        <label>Exam</label>
+
+                        <select>
+                            <option>Internal Assessment 1</option>
+                            <option>Internal Assessment 2</option>
+                            <option>Final Examination</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <!-- Marks Summary -->
+                <div class="marks-summary">
+
+                    <div class="marks-summary-card">
+                        <span>Total Students</span>
+                        <strong>32</strong>
+                    </div>
+
+                    <div class="marks-summary-card">
+                        <span>Marks Entered</span>
+                        <strong class="marks-blue">28</strong>
+                    </div>
+
+                    <div class="marks-summary-card">
+                        <span>Pending</span>
+                        <strong class="marks-orange">4</strong>
+                    </div>
+
+                    <div class="marks-summary-card">
+                        <span>Average Marks</span>
+                        <strong class="marks-green">78%</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Marks Table -->
+                <div class="marks-table-card">
+
+                    <div class="marks-table-header">
+
+                        <div>
+                            <h2>Student Marks</h2>
+                            <p>Enter marks out of 100 for the selected examination</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="marks-table-wrapper">
+
+                        <table class="marks-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Roll No.</th>
+                                    <th>Internal</th>
+                                    <th>Assignment</th>
+                                    <th>Final Marks</th>
+                                    <th>Grade</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <div class="marks-student">
+
+                                            <div class="marks-avatar">
+                                                AS
+                                            </div>
+
+                                            <div>
+                                                <strong>Aditya Sharma</strong>
+                                                <span>STU001</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>01</td>
+
+                                    <td>
+                                        <input type="number" value="24" min="0" max="30">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="18" min="0" max="20">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="42" min="0" max="50">
+                                    </td>
+
+                                    <td>
+                                        <span class="grade grade-a">
+                                            A
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="result-pass">
+                                            Pass
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="marks-student">
+
+                                            <div class="marks-avatar">
+                                                RP
+                                            </div>
+
+                                            <div>
+                                                <strong>Rohit Patil</strong>
+                                                <span>STU002</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>02</td>
+
+                                    <td>
+                                        <input type="number" value="22" min="0" max="30">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="17" min="0" max="20">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="38" min="0" max="50">
+                                    </td>
+
+                                    <td>
+                                        <span class="grade grade-b">
+                                            B
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="result-pass">
+                                            Pass
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="marks-student">
+
+                                            <div class="marks-avatar">
+                                                SK
+                                            </div>
+
+                                            <div>
+                                                <strong>Sneha Kulkarni</strong>
+                                                <span>STU003</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>03</td>
+
+                                    <td>
+                                        <input type="number" value="19" min="0" max="30">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="15" min="0" max="20">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="31" min="0" max="50">
+                                    </td>
+
+                                    <td>
+                                        <span class="grade grade-c">
+                                            C
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="result-pass">
+                                            Pass
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="marks-student">
+
+                                            <div class="marks-avatar">
+                                                VK
+                                            </div>
+
+                                            <div>
+                                                <strong>Vishal Kumar</strong>
+                                                <span>STU004</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>04</td>
+
+                                    <td>
+                                        <input type="number" value="12" min="0" max="30">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="10" min="0" max="20">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="22" min="0" max="50">
+                                    </td>
+
+                                    <td>
+                                        <span class="grade grade-d">
+                                            D
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="result-fail">
+                                            Fail
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="marks-student">
+
+                                            <div class="marks-avatar">
+                                                NM
+                                            </div>
+
+                                            <div>
+                                                <strong>Neha More</strong>
+                                                <span>STU005</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>05</td>
+
+                                    <td>
+                                        <input type="number" value="27" min="0" max="30">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="19" min="0" max="20">
+                                    </td>
+
+                                    <td>
+                                        <input type="number" value="45" min="0" max="50">
+                                    </td>
+
+                                    <td>
+                                        <span class="grade grade-a">
+                                            A
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="result-pass">
+                                            Pass
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

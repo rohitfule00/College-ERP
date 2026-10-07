@@ -1,0 +1,335 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Students | Admin Portal{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header students-header">
+
+                <div>
+                    <h1>Students</h1>
+                    <p>Manage student records and academic information</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Add Student
+                </button>
+
+            </div>
+
+
+            <!-- Student Statistics -->
+            <div class="student-stats-grid">
+
+                <div class="student-stat-card">
+                    <div class="student-stat-icon blue">
+                        <span>👨‍🎓</span>
+                    </div>
+                    <div>
+                        <span>Total Students</span>
+                        <strong>1,248</strong>
+                    </div>
+                </div>
+
+                <div class="student-stat-card">
+                    <div class="student-stat-icon green">
+                        <span>✓</span>
+                    </div>
+                    <div>
+                        <span>Active Students</span>
+                        <strong>1,196</strong>
+                    </div>
+                </div>
+
+                <div class="student-stat-card">
+                    <div class="student-stat-icon orange">
+                        <span>⏸</span>
+                    </div>
+                    <div>
+                        <span>Inactive Students</span>
+                        <strong>52</strong>
+                    </div>
+                </div>
+
+                <div class="student-stat-card">
+                    <div class="student-stat-icon purple">
+                        <span>🎓</span>
+                    </div>
+                    <div>
+                        <span>Graduating Students</span>
+                        <strong>286</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="students-filter-panel">
+
+                <div class="students-search">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M16 16L21 21"></path>
+                    </svg>
+
+                    <input
+                        type="text"
+                        placeholder="Search students by name, ID or email..."
+                    >
+                </div>
+
+                <select>
+                    <option>All Departments</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                </select>
+
+                <select>
+                    <option>All Classes</option>
+                    <option>FY B.Tech</option>
+                    <option>SY B.Tech</option>
+                    <option>TY B.Tech</option>
+                    <option>Final Year</option>
+                </select>
+
+                <select>
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                </select>
+
+            </div>
+
+
+            <!-- Students Table -->
+            <div class="students-table-panel">
+
+                <div class="students-table-header">
+
+                    <div>
+                        <h3>Student List</h3>
+                        <p>Showing 1–10 of 1,248 students</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export
+                    </button>
+
+                </div>
+
+
+                <div class="students-table-wrapper">
+
+                    <table class="students-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Student ID</th>
+                                <th>Department</th>
+                                <th>Class</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="student-info">
+                                        <div class="student-avatar">RF</div>
+                                        <div>
+                                            <strong>Rohit Fule</strong>
+                                            <span>Male</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>STU00124</td>
+                                <td>Computer Science</td>
+                                <td>TY B.Tech</td>
+                                <td>rohit@example.com</td>
+
+                                <td>
+                                    <span class="student-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="student-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="student-info">
+                                        <div class="student-avatar">AS</div>
+                                        <div>
+                                            <strong>Aditya Sharma</strong>
+                                            <span>Male</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>STU00125</td>
+                                <td>Information Technology</td>
+                                <td>TY B.Tech</td>
+                                <td>aditya@example.com</td>
+
+                                <td>
+                                    <span class="student-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="student-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="student-info">
+                                        <div class="student-avatar">PK</div>
+                                        <div>
+                                            <strong>Priya Kulkarni</strong>
+                                            <span>Female</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>STU00126</td>
+                                <td>Computer Science</td>
+                                <td>SY B.Tech</td>
+                                <td>priya@example.com</td>
+
+                                <td>
+                                    <span class="student-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="student-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="student-info">
+                                        <div class="student-avatar">VM</div>
+                                        <div>
+                                            <strong>Vikas More</strong>
+                                            <span>Male</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>STU00127</td>
+                                <td>Mechanical</td>
+                                <td>Final Year</td>
+                                <td>vikas@example.com</td>
+
+                                <td>
+                                    <span class="student-status inactive">
+                                        Inactive
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="student-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="student-info">
+                                        <div class="student-avatar">SN</div>
+                                        <div>
+                                            <strong> Sneha Patil</strong>
+                                            <span>Female</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>STU00128</td>
+                                <td>Electronics</td>
+                                <td>TY B.Tech</td>
+                                <td>sneha@example.com</td>
+
+                                <td>
+                                    <span class="student-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="student-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="students-pagination">
+
+                    <span>Showing 1 to 5 of 1,248 students</span>
+
+                    <div class="pagination-buttons">
+                        <button disabled>‹</button>
+                        <button class="current">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>...</button>
+                        <button>250</button>
+                        <button>›</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

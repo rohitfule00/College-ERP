@@ -1,0 +1,387 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Teachers | Admin Portal{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header teachers-header">
+
+                <div>
+                    <h1>Teachers</h1>
+                    <p>Manage faculty members and teaching information</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Add Teacher
+                </button>
+
+            </div>
+
+
+            <!-- Teacher Statistics -->
+            <div class="teacher-stats-grid">
+
+                <div class="teacher-stat-card">
+                    <div class="teacher-stat-icon blue">👨‍🏫</div>
+                    <div>
+                        <span>Total Teachers</span>
+                        <strong>86</strong>
+                    </div>
+                </div>
+
+                <div class="teacher-stat-card">
+                    <div class="teacher-stat-icon green">✓</div>
+                    <div>
+                        <span>Active Teachers</span>
+                        <strong>82</strong>
+                    </div>
+                </div>
+
+                <div class="teacher-stat-card">
+                    <div class="teacher-stat-icon orange">⏸</div>
+                    <div>
+                        <span>On Leave</span>
+                        <strong>4</strong>
+                    </div>
+                </div>
+
+                <div class="teacher-stat-card">
+                    <div class="teacher-stat-icon purple">🏢</div>
+                    <div>
+                        <span>Departments</span>
+                        <strong>12</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="teachers-filter-panel">
+
+                <div class="teachers-search">
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M16 16L21 21"></path>
+                    </svg>
+
+                    <input
+                        type="text"
+                        placeholder="Search teachers by name, ID or email..."
+                    >
+
+                </div>
+
+                <select>
+                    <option>All Departments</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                </select>
+
+                <select>
+                    <option>All Designations</option>
+                    <option>Professor</option>
+                    <option>Associate Professor</option>
+                    <option>Assistant Professor</option>
+                    <option>Lecturer</option>
+                </select>
+
+                <select>
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>On Leave</option>
+                    <option>Inactive</option>
+                </select>
+
+            </div>
+
+
+            <!-- Teacher Table -->
+            <div class="teachers-table-panel">
+
+                <div class="teachers-table-header">
+
+                    <div>
+                        <h3>Teacher List</h3>
+                        <p>Showing 1–5 of 86 teachers</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export
+                    </button>
+
+                </div>
+
+
+                <div class="teachers-table-wrapper">
+
+                    <table class="teachers-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Teacher</th>
+                                <th>Teacher ID</th>
+                                <th>Department</th>
+                                <th>Designation</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <div class="teacher-info">
+
+                                        <div class="teacher-avatar">
+                                            PS
+                                        </div>
+
+                                        <div>
+                                            <strong>Dr. Priya Sharma</strong>
+                                            <span>Faculty</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>TEA001</td>
+                                <td>Computer Science</td>
+                                <td>Professor</td>
+                                <td>priya@example.com</td>
+
+                                <td>
+                                    <span class="teacher-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="teacher-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="teacher-info">
+
+                                        <div class="teacher-avatar">
+                                            AM
+                                        </div>
+
+                                        <div>
+                                            <strong>Prof. Amit More</strong>
+                                            <span>Faculty</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>TEA002</td>
+                                <td>Information Technology</td>
+                                <td>Associate Professor</td>
+                                <td>amit@example.com</td>
+
+                                <td>
+                                    <span class="teacher-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="teacher-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="teacher-info">
+
+                                        <div class="teacher-avatar">
+                                            SK
+                                        </div>
+
+                                        <div>
+                                            <strong>Dr. Sneha Kulkarni</strong>
+                                            <span>Faculty</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>TEA003</td>
+                                <td>Electronics</td>
+                                <td>Assistant Professor</td>
+                                <td>sneha@example.com</td>
+
+                                <td>
+                                    <span class="teacher-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="teacher-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="teacher-info">
+
+                                        <div class="teacher-avatar">
+                                            RV
+                                        </div>
+
+                                        <div>
+                                            <strong>Prof. Rahul Verma</strong>
+                                            <span>Faculty</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>TEA004</td>
+                                <td>Mechanical</td>
+                                <td>Assistant Professor</td>
+                                <td>rahul@example.com</td>
+
+                                <td>
+                                    <span class="teacher-status leave">
+                                        On Leave
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="teacher-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="teacher-info">
+
+                                        <div class="teacher-avatar">
+                                            NP
+                                        </div>
+
+                                        <div>
+                                            <strong>Prof. Neha Patil</strong>
+                                            <span>Faculty</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>TEA005</td>
+                                <td>Civil</td>
+                                <td>Lecturer</td>
+                                <td>neha@example.com</td>
+
+                                <td>
+                                    <span class="teacher-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="teacher-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="teachers-pagination">
+
+                    <span>Showing 1 to 5 of 86 teachers</span>
+
+                    <div class="pagination-buttons">
+
+                        <button disabled>‹</button>
+
+                        <button class="current">
+                            1
+                        </button>
+
+                        <button>
+                            2
+                        </button>
+
+                        <button>
+                            3
+                        </button>
+
+                        <button>
+                            ...
+                        </button>
+
+                        <button>
+                            18
+                        </button>
+
+                        <button>
+                            ›
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

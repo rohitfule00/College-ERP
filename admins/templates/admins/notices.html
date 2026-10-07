@@ -1,0 +1,439 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Notices Management{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <div>
+                    <h1>Notices</h1>
+                    <p>Create, publish and manage college announcements</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Create Notice
+                </button>
+            </div>
+
+
+            <!-- Statistics -->
+            <div class="admin-overview-grid">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon blue">N</div>
+                    <div>
+                        <span>Total Notices</span>
+                        <strong>86</strong>
+                        <small>All published notices</small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon green">✓</div>
+                    <div>
+                        <span>Published</span>
+                        <strong>72</strong>
+                        <small>Currently visible</small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon orange">D</div>
+                    <div>
+                        <span>Drafts</span>
+                        <strong>9</strong>
+                        <small>Not published yet</small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon red">!</div>
+                    <div>
+                        <span>Important</span>
+                        <strong>5</strong>
+                        <small>Priority announcements</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Notice Overview -->
+            <div class="admin-dashboard-grid">
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h3>Notice Distribution</h3>
+                            <p>Notices by audience</p>
+                        </div>
+                    </div>
+
+                    <div class="notice-distribution">
+
+                        <div class="notice-distribution-item">
+                            <div>
+                                <span class="notice-dot blue"></span>
+                                <span>All Students</span>
+                            </div>
+                            <strong>34</strong>
+                        </div>
+
+                        <div class="notice-distribution-item">
+                            <div>
+                                <span class="notice-dot green"></span>
+                                <span>Teachers</span>
+                            </div>
+                            <strong>18</strong>
+                        </div>
+
+                        <div class="notice-distribution-item">
+                            <div>
+                                <span class="notice-dot orange"></span>
+                                <span>Departments</span>
+                            </div>
+                            <strong>21</strong>
+                        </div>
+
+                        <div class="notice-distribution-item">
+                            <div>
+                                <span class="notice-dot purple"></span>
+                                <span>General</span>
+                            </div>
+                            <strong>13</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h3>Recent Notice Activity</h3>
+                            <p>Latest announcements</p>
+                        </div>
+                    </div>
+
+                    <div class="notice-activity-list">
+
+                        <div class="notice-activity">
+                            <div class="notice-activity-icon">
+                                N
+                            </div>
+
+                            <div>
+                                <strong>Semester Examination Schedule</strong>
+                                <span>Published 2 hours ago</span>
+                            </div>
+                        </div>
+
+                        <div class="notice-activity">
+                            <div class="notice-activity-icon">
+                                N
+                            </div>
+
+                            <div>
+                                <strong>Fee Payment Reminder</strong>
+                                <span>Published yesterday</span>
+                            </div>
+                        </div>
+
+                        <div class="notice-activity">
+                            <div class="notice-activity-icon">
+                                N
+                            </div>
+
+                            <div>
+                                <strong>Holiday Announcement</strong>
+                                <span>Published 3 days ago</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Notice Records -->
+            <section class="admin-panel notice-table-panel">
+
+                <div class="admin-panel-header">
+
+                    <div>
+                        <h3>All Notices</h3>
+                        <p>Manage college announcements and notifications</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export Notices
+                    </button>
+
+                </div>
+
+
+                <!-- Filters -->
+                <div class="notice-filters">
+
+                    <input
+                        type="text"
+                        placeholder="Search notice..."
+                    >
+
+                    <select>
+                        <option>All Categories</option>
+                        <option>Academic</option>
+                        <option>Examination</option>
+                        <option>Fees</option>
+                        <option>Events</option>
+                        <option>General</option>
+                    </select>
+
+                    <select>
+                        <option>All Audiences</option>
+                        <option>All Students</option>
+                        <option>Teachers</option>
+                        <option>Departments</option>
+                        <option>General</option>
+                    </select>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Published</option>
+                        <option>Draft</option>
+                        <option>Archived</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Table -->
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Notice</th>
+                                <th>Category</th>
+                                <th>Audience</th>
+                                <th>Published By</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="notice-title">
+                                        <strong>Semester Examination Schedule</strong>
+                                        <span>End semester examination timetable</span>
+                                    </div>
+                                </td>
+
+                                <td>Examination</td>
+                                <td>All Students</td>
+                                <td>Admin User</td>
+                                <td>07 Oct 2026</td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Published
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="priority-badge high">
+                                        High
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="notice-title">
+                                        <strong>Fee Payment Reminder</strong>
+                                        <span>Pending semester fee payment reminder</span>
+                                    </div>
+                                </td>
+
+                                <td>Fees</td>
+                                <td>All Students</td>
+                                <td>Admin User</td>
+                                <td>06 Oct 2026</td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Published
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="priority-badge high">
+                                        High
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="notice-title">
+                                        <strong>Department Meeting</strong>
+                                        <span>Monthly faculty department meeting</span>
+                                    </div>
+                                </td>
+
+                                <td>General</td>
+                                <td>Teachers</td>
+                                <td>Admin User</td>
+                                <td>05 Oct 2026</td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Published
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="priority-badge normal">
+                                        Normal
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="notice-title">
+                                        <strong>Annual Sports Event</strong>
+                                        <span>Registration details for students</span>
+                                    </div>
+                                </td>
+
+                                <td>Events</td>
+                                <td>All Students</td>
+                                <td>Admin User</td>
+                                <td>03 Oct 2026</td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Published
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="priority-badge normal">
+                                        Normal
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="notice-title">
+                                        <strong>Library Rules Update</strong>
+                                        <span>Updated library timings and guidelines</span>
+                                    </div>
+                                </td>
+
+                                <td>General</td>
+                                <td>All Students</td>
+                                <td>Admin User</td>
+                                <td>01 Oct 2026</td>
+
+                                <td>
+                                    <span class="status-badge warning">
+                                        Draft
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="priority-badge normal">
+                                        Normal
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        Edit
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="pagination-buttons">
+
+                    <button>Previous</button>
+
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+
+                    <button>Next</button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

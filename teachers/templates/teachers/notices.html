@@ -1,0 +1,245 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Notices{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="notices-page">
+
+                <!-- Page Header -->
+                <div class="page-header">
+
+                    <div>
+                        <h1>Notices</h1>
+                        <p>Create and manage notices for students</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        + Create Notice
+                    </button>
+
+                </div>
+
+
+                <!-- Notice Stats -->
+                <div class="notice-stats">
+
+                    <div class="notice-stat-card">
+                        <span>Total Notices</span>
+                        <strong>18</strong>
+                    </div>
+
+                    <div class="notice-stat-card">
+                        <span>Published</span>
+                        <strong class="notice-blue">14</strong>
+                    </div>
+
+                    <div class="notice-stat-card">
+                        <span>Drafts</span>
+                        <strong class="notice-orange">3</strong>
+                    </div>
+
+                    <div class="notice-stat-card">
+                        <span>Scheduled</span>
+                        <strong class="notice-green">1</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Notice List -->
+                <div class="notice-list">
+
+                    <div class="notice-card">
+
+                        <div class="notice-icon academic">
+                            A
+                        </div>
+
+                        <div class="notice-content">
+
+                            <div class="notice-top">
+
+                                <div>
+                                    <h2>Internal Assessment Schedule</h2>
+
+                                    <div class="notice-meta">
+                                        <span>Academic</span>
+                                        <span>07 Oct 2026</span>
+                                    </div>
+                                </div>
+
+                                <span class="notice-status published">
+                                    Published
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Internal Assessment 1 will begin from
+                                15 October 2026. Students are requested to
+                                check the examination schedule.
+                            </p>
+
+                            <div class="notice-footer">
+                                <span>For: B.Tech CSE</span>
+
+                                <a href="#">
+                                    View Notice →
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notice-card">
+
+                        <div class="notice-icon event">
+                            E
+                        </div>
+
+                        <div class="notice-content">
+
+                            <div class="notice-top">
+
+                                <div>
+                                    <h2>Technical Workshop</h2>
+
+                                    <div class="notice-meta">
+                                        <span>Event</span>
+                                        <span>05 Oct 2026</span>
+                                    </div>
+                                </div>
+
+                                <span class="notice-status published">
+                                    Published
+                                </span>
+
+                            </div>
+
+                            <p>
+                                A technical workshop on Full Stack Development
+                                will be conducted in Seminar Hall 1.
+                            </p>
+
+                            <div class="notice-footer">
+                                <span>For: All Students</span>
+
+                                <a href="#">
+                                    View Notice →
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notice-card">
+
+                        <div class="notice-icon general">
+                            G
+                        </div>
+
+                        <div class="notice-content">
+
+                            <div class="notice-top">
+
+                                <div>
+                                    <h2>Assignment Submission Reminder</h2>
+
+                                    <div class="notice-meta">
+                                        <span>General</span>
+                                        <span>03 Oct 2026</span>
+                                    </div>
+                                </div>
+
+                                <span class="notice-status published">
+                                    Published
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Students who have not submitted their Python
+                                assignment are requested to submit it before
+                                the deadline.
+                            </p>
+
+                            <div class="notice-footer">
+                                <span>For: B.Tech CSE</span>
+
+                                <a href="#">
+                                    View Notice →
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notice-card">
+
+                        <div class="notice-icon important">
+                            !
+                        </div>
+
+                        <div class="notice-content">
+
+                            <div class="notice-top">
+
+                                <div>
+                                    <h2>Attendance Shortage Notice</h2>
+
+                                    <div class="notice-meta">
+                                        <span>Important</span>
+                                        <span>01 Oct 2026</span>
+                                    </div>
+                                </div>
+
+                                <span class="notice-status draft">
+                                    Draft
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Students having attendance below the required
+                                percentage will be notified individually.
+                            </p>
+
+                            <div class="notice-footer">
+                                <span>For: B.Tech AI</span>
+
+                                <a href="#">
+                                    Edit Notice →
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

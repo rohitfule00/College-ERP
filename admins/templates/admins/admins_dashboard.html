@@ -1,0 +1,386 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Overview of your college operations</p>
+                </div>
+            </div>
+
+
+            <!-- Overview Cards -->
+            <section class="admin-overview-grid">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon students-icon">
+                        <span>ST</span>
+                    </div>
+
+                    <div>
+                        <p>Total Students</p>
+                        <h3>1,248</h3>
+                        <span class="stat-positive">+8.2% this month</span>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon teachers-icon">
+                        <span>TC</span>
+                    </div>
+
+                    <div>
+                        <p>Total Teachers</p>
+                        <h3>86</h3>
+                        <span class="stat-positive">+3 new this month</span>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon departments-icon">
+                        <span>DP</span>
+                    </div>
+
+                    <div>
+                        <p>Departments</p>
+                        <h3>12</h3>
+                        <span class="stat-neutral">Active departments</span>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon courses-icon">
+                        <span>CR</span>
+                    </div>
+
+                    <div>
+                        <p>Total Courses</p>
+                        <h3>48</h3>
+                        <span class="stat-neutral">Currently offered</span>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon fees-icon">
+                        <span>₹</span>
+                    </div>
+
+                    <div>
+                        <p>Pending Fees</p>
+                        <h3>₹8.4L</h3>
+                        <span class="stat-warning">124 students pending</span>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon attendance-icon">
+                        <span>AT</span>
+                    </div>
+
+                    <div>
+                        <p>Today's Attendance</p>
+                        <h3>91.6%</h3>
+                        <span class="stat-positive">Good attendance</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Attendance + Fees -->
+            <section class="admin-dashboard-grid">
+
+                <!-- Attendance -->
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h2>Attendance Overview</h2>
+                            <p>Today's student attendance</p>
+                        </div>
+
+                        <button class="admin-view-button">
+                            View Details
+                        </button>
+                    </div>
+
+
+                    <div class="attendance-summary">
+
+                        <div class="attendance-item">
+                            <span class="attendance-dot present"></span>
+                            <div>
+                                <strong>1,143</strong>
+                                <small>Present</small>
+                            </div>
+                        </div>
+
+
+                        <div class="attendance-item">
+                            <span class="attendance-dot absent"></span>
+                            <div>
+                                <strong>71</strong>
+                                <small>Absent</small>
+                            </div>
+                        </div>
+
+
+                        <div class="attendance-item">
+                            <span class="attendance-dot late"></span>
+                            <div>
+                                <strong>34</strong>
+                                <small>Late</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-progress">
+
+                        <div class="progress-header">
+                            <span>Overall Attendance</span>
+                            <strong>91.6%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fees -->
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h2>Fees Overview</h2>
+                            <p>Current fee collection status</p>
+                        </div>
+
+                        <button class="admin-view-button">
+                            View Details
+                        </button>
+                    </div>
+
+
+                    <div class="fees-summary">
+
+                        <div class="fee-row">
+                            <span>Collected</span>
+                            <strong class="fee-collected">₹42.6L</strong>
+                        </div>
+
+                        <div class="fee-row">
+                            <span>Pending</span>
+                            <strong>₹8.4L</strong>
+                        </div>
+
+                        <div class="fee-row">
+                            <span>Overdue</span>
+                            <strong class="fee-overdue">₹2.1L</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="fee-progress">
+
+                        <div class="progress-header">
+                            <span>Collection Progress</span>
+                            <strong>83.5%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="fee-progress-fill"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Academic + Activities -->
+            <section class="admin-dashboard-grid">
+
+                <!-- Academic Overview -->
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h2>Academic Overview</h2>
+                            <p>Upcoming academic activities</p>
+                        </div>
+                    </div>
+
+
+                    <div class="academic-list">
+
+                        <div class="academic-item">
+                            <div class="academic-date">
+                                <strong>15</strong>
+                                <span>OCT</span>
+                            </div>
+
+                            <div>
+                                <strong>Semester Examination</strong>
+                                <p>B.Tech Semester 5</p>
+                            </div>
+
+                            <span class="academic-badge">Upcoming</span>
+                        </div>
+
+
+                        <div class="academic-item">
+                            <div class="academic-date">
+                                <strong>18</strong>
+                                <span>OCT</span>
+                            </div>
+
+                            <div>
+                                <strong>Internal Assessment</strong>
+                                <p>Computer Engineering</p>
+                            </div>
+
+                            <span class="academic-badge">Upcoming</span>
+                        </div>
+
+
+                        <div class="academic-item">
+                            <div class="academic-date">
+                                <strong>22</strong>
+                                <span>OCT</span>
+                            </div>
+
+                            <div>
+                                <strong>Project Submission</strong>
+                                <p>Final Year Students</p>
+                            </div>
+
+                            <span class="academic-badge">Upcoming</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Recent Activities -->
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h2>Recent Activities</h2>
+                            <p>Latest system activities</p>
+                        </div>
+
+                        <button class="admin-view-button">
+                            View All
+                        </button>
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+                            <div class="activity-icon">ST</div>
+
+                            <div>
+                                <strong>New student registered</strong>
+                                <p>Rahul Patil joined Computer Engineering</p>
+                                <small>10 minutes ago</small>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <div class="activity-icon">TC</div>
+
+                            <div>
+                                <strong>Teacher profile updated</strong>
+                                <p>Dr. Priya Sharma updated her profile</p>
+                                <small>35 minutes ago</small>
+                            </div>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <div class="activity-icon">FE</div>
+
+                            <div>
+                                <strong>Fee payment received</strong>
+                                <p>Payment received from student #1048</p>
+                                <small>1 hour ago</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Alerts -->
+            <section class="admin-panel admin-alert-panel">
+
+                <div class="admin-panel-header">
+                    <div>
+                        <h2>Important Alerts</h2>
+                        <p>Items that require your attention</p>
+                    </div>
+                </div>
+
+
+                <div class="admin-alert-list">
+
+                    <div class="admin-alert warning-alert">
+                        <strong>Pending Fees</strong>
+                        <span>124 students have pending fee payments.</span>
+                    </div>
+
+                    <div class="admin-alert danger-alert">
+                        <strong>Low Attendance</strong>
+                        <span>37 students have attendance below 75%.</span>
+                    </div>
+
+                    <div class="admin-alert info-alert">
+                        <strong>Upcoming Exams</strong>
+                        <span>Semester examinations are scheduled next week.</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

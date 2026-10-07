@@ -1,0 +1,237 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="messages-page">
+
+                <!-- Page Header -->
+                <div class="page-header">
+
+                    <div>
+                        <h1>Messages</h1>
+                        <p>Communicate with students and college staff</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        + New Message
+                    </button>
+
+                </div>
+
+
+                <!-- Messages Layout -->
+                <div class="messages-layout">
+
+                    <!-- Conversation List -->
+                    <div class="conversation-panel">
+
+                        <div class="conversation-header">
+                            <h2>Messages</h2>
+
+                            <span class="message-count">
+                                4
+                            </span>
+                        </div>
+
+                        <div class="message-search">
+                            <input type="text" placeholder="Search messages...">
+                        </div>
+
+
+                        <div class="conversation-list">
+
+                            <div class="conversation active">
+
+                                <div class="conversation-avatar">
+                                    AS
+                                </div>
+
+                                <div class="conversation-info">
+
+                                    <div class="conversation-top">
+                                        <strong>Aditya Sharma</strong>
+                                        <span>10:42 AM</span>
+                                    </div>
+
+                                    <p>
+                                        Sir, I have a question about the assignment.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="conversation">
+
+                                <div class="conversation-avatar">
+                                    RP
+                                </div>
+
+                                <div class="conversation-info">
+
+                                    <div class="conversation-top">
+                                        <strong>Rohit Patil</strong>
+                                        <span>Yesterday</span>
+                                    </div>
+
+                                    <p>
+                                        Thank you for the information, sir.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="conversation">
+
+                                <div class="conversation-avatar">
+                                    SK
+                                </div>
+
+                                <div class="conversation-info">
+
+                                    <div class="conversation-top">
+                                        <strong>Sneha Kulkarni</strong>
+                                        <span>05 Oct</span>
+                                    </div>
+
+                                    <p>
+                                        When is the internal assessment?
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="conversation">
+
+                                <div class="conversation-avatar staff">
+                                    AD
+                                </div>
+
+                                <div class="conversation-info">
+
+                                    <div class="conversation-top">
+                                        <strong>Admin Office</strong>
+                                        <span>04 Oct</span>
+                                    </div>
+
+                                    <p>
+                                        Please submit the monthly report.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Chat Panel -->
+                    <div class="chat-panel">
+
+                        <div class="chat-header">
+
+                            <div class="chat-user-avatar">
+                                AS
+                            </div>
+
+                            <div>
+                                <strong>Aditya Sharma</strong>
+                                <span>B.Tech CSE • STU001</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="chat-body">
+
+                            <div class="message received">
+
+                                <div class="message-bubble">
+                                    Hello Sir, I have a question about the
+                                    Python assignment.
+                                </div>
+
+                                <span>10:38 AM</span>
+
+                            </div>
+
+
+                            <div class="message sent">
+
+                                <div class="message-bubble">
+                                    Sure Aditya. What would you like to know?
+                                </div>
+
+                                <span>10:39 AM</span>
+
+                            </div>
+
+
+                            <div class="message received">
+
+                                <div class="message-bubble">
+                                    Should we submit the assignment as a PDF
+                                    or can we submit the source code?
+                                </div>
+
+                                <span>10:40 AM</span>
+
+                            </div>
+
+
+                            <div class="message sent">
+
+                                <div class="message-bubble">
+                                    Please submit both the PDF and the source
+                                    code before the deadline.
+                                </div>
+
+                                <span>10:42 AM</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Message Input -->
+                        <div class="chat-input-area">
+
+                            <input type="text" placeholder="Type your message...">
+
+                            <button class="send-btn">
+                                Send
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

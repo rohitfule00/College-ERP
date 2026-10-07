@@ -1,0 +1,364 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Subjects | Admin Portal{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header subjects-page-header">
+
+                <div>
+                    <h1>Subjects</h1>
+                    <p>Manage subjects, departments and academic assignments.</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Add Subject
+                </button>
+
+            </div>
+
+
+            <!-- Subject Statistics -->
+            <div class="admin-overview-grid subjects-stats-grid">
+
+                <div class="admin-panel subjects-stat-card">
+                    <div class="subjects-stat-icon">📚</div>
+                    <div>
+                        <span>Total Subjects</span>
+                        <strong>156</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel subjects-stat-card">
+                    <div class="subjects-stat-icon">✓</div>
+                    <div>
+                        <span>Active Subjects</span>
+                        <strong>148</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel subjects-stat-card">
+                    <div class="subjects-stat-icon">🏛</div>
+                    <div>
+                        <span>Departments</span>
+                        <strong>12</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel subjects-stat-card">
+                    <div class="subjects-stat-icon">👨‍🎓</div>
+                    <div>
+                        <span>Assigned Students</span>
+                        <strong>1,248</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="admin-panel subjects-filter-panel">
+
+                <div class="subjects-filter-row">
+
+                    <div class="subjects-search-box">
+                        <span>⌕</span>
+                        <input
+                            type="text"
+                            placeholder="Search subjects..."
+                        >
+                    </div>
+
+                    <select>
+                        <option>All Departments</option>
+                        <option>Computer Science</option>
+                        <option>Information Technology</option>
+                        <option>AI & Data Science</option>
+                        <option>Electronics</option>
+                        <option>Mechanical</option>
+                    </select>
+
+                    <select>
+                        <option>All Semesters</option>
+                        <option>Semester 1</option>
+                        <option>Semester 2</option>
+                        <option>Semester 3</option>
+                        <option>Semester 4</option>
+                        <option>Semester 5</option>
+                        <option>Semester 6</option>
+                        <option>Semester 7</option>
+                        <option>Semester 8</option>
+                    </select>
+
+                    <select>
+                        <option>All Types</option>
+                        <option>Theory</option>
+                        <option>Practical</option>
+                        <option>Elective</option>
+                    </select>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Subjects Table -->
+            <div class="admin-panel subjects-table-panel">
+
+                <div class="subjects-table-header">
+                    <div>
+                        <h3>Subject List</h3>
+                        <p>Showing 1–10 of 156 subjects</p>
+                    </div>
+                </div>
+
+                <div class="subjects-table-wrapper">
+
+                    <table class="subjects-table">
+
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Subject Name</th>
+                                <th>Department</th>
+                                <th>Semester</th>
+                                <th>Type</th>
+                                <th>Credits</th>
+                                <th>Students</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>CS301</strong></td>
+                                <td>Database Management System</td>
+                                <td>Computer Science</td>
+                                <td>Semester 5</td>
+                                <td>Theory</td>
+                                <td>4</td>
+                                <td>124</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>CS302</strong></td>
+                                <td>Operating Systems</td>
+                                <td>Computer Science</td>
+                                <td>Semester 5</td>
+                                <td>Theory</td>
+                                <td>4</td>
+                                <td>118</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>CS303</strong></td>
+                                <td>Computer Networks</td>
+                                <td>Computer Science</td>
+                                <td>Semester 6</td>
+                                <td>Theory</td>
+                                <td>4</td>
+                                <td>116</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>IT401</strong></td>
+                                <td>Web Technology</td>
+                                <td>Information Technology</td>
+                                <td>Semester 4</td>
+                                <td>Theory</td>
+                                <td>3</td>
+                                <td>108</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>AI501</strong></td>
+                                <td>Machine Learning</td>
+                                <td>AI & Data Science</td>
+                                <td>Semester 5</td>
+                                <td>Theory</td>
+                                <td>4</td>
+                                <td>96</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>AI502</strong></td>
+                                <td>Data Analytics Lab</td>
+                                <td>AI & Data Science</td>
+                                <td>Semester 6</td>
+                                <td>Practical</td>
+                                <td>2</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>EC401</strong></td>
+                                <td>Digital Signal Processing</td>
+                                <td>Electronics</td>
+                                <td>Semester 4</td>
+                                <td>Theory</td>
+                                <td>4</td>
+                                <td>84</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>ME301</strong></td>
+                                <td>Thermodynamics</td>
+                                <td>Mechanical</td>
+                                <td>Semester 3</td>
+                                <td>Theory</td>
+                                <td>4</td>
+                                <td>76</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>CS405</strong></td>
+                                <td>Cloud Computing</td>
+                                <td>Computer Science</td>
+                                <td>Semester 7</td>
+                                <td>Elective</td>
+                                <td>3</td>
+                                <td>72</td>
+                                <td>
+                                    <span class="subject-status active">
+                                        Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>IT305</strong></td>
+                                <td>Python Programming</td>
+                                <td>Information Technology</td>
+                                <td>Semester 3</td>
+                                <td>Practical</td>
+                                <td>3</td>
+                                <td>104</td>
+                                <td>
+                                    <span class="subject-status inactive">
+                                        Inactive
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="subject-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="subjects-pagination">
+
+                    <span>Showing 1 to 10 of 156 entries</span>
+
+                    <div class="pagination-buttons">
+                        <button disabled>Previous</button>
+                        <button class="active-page">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>Next</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

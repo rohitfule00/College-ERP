@@ -1,0 +1,340 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Students{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="students-page">
+
+                <!-- Page Header -->
+                <div class="page-header">
+
+                    <div>
+                        <h1>Students</h1>
+                        <p>View and manage students assigned to your classes</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        + Add Student
+                    </button>
+
+                </div>
+
+
+                <!-- Search & Filter -->
+                <div class="students-toolbar">
+
+                    <div class="students-search">
+                        <input type="text" placeholder="Search student by name or ID...">
+                    </div>
+
+                    <select class="students-filter">
+                        <option>All Classes</option>
+                        <option>B.Tech CSE</option>
+                        <option>B.Tech AI</option>
+                        <option>B.Tech IT</option>
+                    </select>
+
+                    <select class="students-filter">
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Students Table -->
+                <div class="students-table-card">
+
+                    <div class="students-table-header">
+
+                        <h2>Student List</h2>
+
+                        <span>86 Students</span>
+
+                    </div>
+
+
+                    <div class="students-table-wrapper">
+
+                        <table class="students-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Class</th>
+                                    <th>Email</th>
+                                    <th>Attendance</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <div class="student-name">
+
+                                            <div class="student-avatar">
+                                                AS
+                                            </div>
+
+                                            <div class="student-name-info">
+                                                <strong>Aditya Sharma</strong>
+                                                <span>STU001</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-class">
+                                            B.Tech CSE
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        aditya@example.com
+                                    </td>
+
+                                    <td>
+                                        <span class="attendance-good">
+                                            92%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="#" class="student-action">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="student-name">
+
+                                            <div class="student-avatar">
+                                                RP
+                                            </div>
+
+                                            <div class="student-name-info">
+                                                <strong>Rohit Patil</strong>
+                                                <span>STU002</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-class">
+                                            B.Tech AI
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        rohit@example.com
+                                    </td>
+
+                                    <td>
+                                        <span class="attendance-good">
+                                            88%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="#" class="student-action">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="student-name">
+
+                                            <div class="student-avatar">
+                                                SK
+                                            </div>
+
+                                            <div class="student-name-info">
+                                                <strong>Sneha Kulkarni</strong>
+                                                <span>STU003</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-class">
+                                            B.Tech CSE
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        sneha@example.com
+                                    </td>
+
+                                    <td>
+                                        <span class="attendance-warning">
+                                            76%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="#" class="student-action">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="student-name">
+
+                                            <div class="student-avatar">
+                                                VK
+                                            </div>
+
+                                            <div class="student-name-info">
+                                                <strong>Vishal Kumar</strong>
+                                                <span>STU004</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-class">
+                                            B.Tech AI
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        vishal@example.com
+                                    </td>
+
+                                    <td>
+                                        <span class="attendance-low">
+                                            64%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-status inactive">
+                                            Inactive
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="#" class="student-action">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="student-name">
+
+                                            <div class="student-avatar">
+                                                NM
+                                            </div>
+
+                                            <div class="student-name-info">
+                                                <strong>Neha More</strong>
+                                                <span>STU005</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-class">
+                                            B.Tech CSE
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        neha@example.com
+                                    </td>
+
+                                    <td>
+                                        <span class="attendance-good">
+                                            95%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="student-status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="#" class="student-action">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

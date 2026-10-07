@@ -1,0 +1,294 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Teacher Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+        <div class="dashboard-header">
+            <div>
+                <h1>Welcome back, Dr. Priya Sharma! 👋</h1>
+                <p>Here's what's happening with your classes today.</p>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="teacher-stats-grid">
+
+            <div class="teacher-stat-card">
+                <div class="stat-icon blue">📚</div>
+                <div>
+                    <span>My Classes</span>
+                    <h2>4</h2>
+                </div>
+            </div>
+
+            <div class="teacher-stat-card">
+                <div class="stat-icon green">👨‍🎓</div>
+                <div>
+                    <span>Total Students</span>
+                    <h2>86</h2>
+                </div>
+            </div>
+
+            <div class="teacher-stat-card">
+                <div class="stat-icon orange">📝</div>
+                <div>
+                    <span>Pending Assignments</span>
+                    <h2>3</h2>
+                </div>
+            </div>
+
+            <div class="teacher-stat-card">
+                <div class="stat-icon purple">🗓️</div>
+                <div>
+                    <span>Today's Classes</span>
+                    <h2>2</h2>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Main Dashboard Grid -->
+
+        <div class="teacher-dashboard-grid">
+
+            <!-- Today's Classes -->
+
+            <section class="teacher-dashboard-card classes-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Today's Classes</h3>
+                        <p>Your scheduled classes for today</p>
+                    </div>
+
+                    <a href="#">View All</a>
+                </div>
+
+                <div class="class-table-wrapper">
+
+                    <table class="teacher-class-table">
+
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Class</th>
+                                <th>Subject</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>09:00 AM</td>
+                                <td>B.Tech - CSE</td>
+                                <td>Python</td>
+                                <td>
+                                    <span class="status-badge upcoming">
+                                        Upcoming
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="#" class="action-link">View</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>11:00 AM</td>
+                                <td>B.Tech - AI</td>
+                                <td>Django</td>
+                                <td>
+                                    <span class="status-badge completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="#" class="action-link">View</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>02:00 PM</td>
+                                <td>B.Tech - CSE</td>
+                                <td>Database</td>
+                                <td>
+                                    <span class="status-badge upcoming">Upcoming</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="action-link">View</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Quick Actions -->
+
+            <section class="teacher-dashboard-card quick-actions-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Quick Actions</h3>
+                        <p>Common teacher activities</p>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+
+                    <a href="#" class="quick-action blue-action">
+                        <span>📅</span>
+                        <div>
+                            <strong>Mark Attendance</strong>
+                            <small>Record today's attendance</small>
+                        </div>
+                    </a>
+
+                    <a href="#" class="quick-action green-action">
+                        <span>📊</span>
+                        <div>
+                            <strong>Add Marks</strong>
+                            <small>Update student grades</small>
+                        </div>
+                    </a>
+
+                    <a href="#" class="quick-action purple-action">
+                        <span>📝</span>
+                        <div>
+                            <strong>Create Assignment</strong>
+                            <small>Give students new work</small>
+                        </div>
+                    </a>
+
+                    <a href="#" class="quick-action orange-action">
+                        <span>📢</span>
+                        <div>
+                            <strong>Post Notice</strong>
+                            <small>Share an announcement</small>
+                        </div>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- Bottom Dashboard Grid -->
+
+        <div class="teacher-dashboard-bottom-grid">
+
+            <!-- Recent Activity -->
+
+            <section class="teacher-dashboard-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Recent Activity</h3>
+                        <p>Your latest activities</p>
+                    </div>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+                        <div class="activity-icon blue">📅</div>
+                        <div>
+                            <strong>Attendance marked</strong>
+                            <p>B.Tech CSE - Python</p>
+                            <small>30 minutes ago</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon green">📊</div>
+                        <div>
+                            <strong>Marks updated</strong>
+                            <p>B.Tech AI - Django</p>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon purple">📝</div>
+                        <div>
+                            <strong>Assignment created</strong>
+                            <p>Python Assignment #4</p>
+                            <small>Yesterday</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Upcoming Deadlines -->
+
+            <section class="teacher-dashboard-card">
+
+                <div class="card-header">
+                    <h3>Upcoming Deadlines</h3>
+                    <p>Important dates to remember</p>
+                </div>
+
+                <div class="deadline-list">
+
+                    <div class="deadline-item">
+                        <div class="deadline-date">
+                            <strong>15</strong>
+                            <span>OCT</span>
+                        </div>
+                        <div>
+                            <strong>Python Assignment</strong>
+                            <p>B.Tech - CSE</p>
+                        </div>
+                    </div>
+
+                    <div class="deadline-item">
+                        <div class="deadline-date">
+                            <strong>18</strong>
+                            <span>OCT</span>
+                        </div>
+                        <div>
+                            <strong>Django Project</strong>
+                            <p>B.Tech - AI</p>
+                        </div>
+                    </div>
+
+                    <div class="deadline-item">
+                        <div class="deadline-date">
+                            <strong>22</strong>
+                            <span>OCT</span>
+                        </div>
+                        <div>
+                            <strong>Database Assignment</strong>
+                            <p>B.Tech - CSE</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

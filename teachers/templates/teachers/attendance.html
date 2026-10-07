@@ -1,0 +1,354 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Attendance{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="attendance-page">
+
+                <!-- Page Header -->
+                <div class="page-header">
+
+                    <div>
+                        <h1>Attendance</h1>
+                        <p>Mark and manage student attendance</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        Save Attendance
+                    </button>
+
+                </div>
+
+
+                <!-- Attendance Controls -->
+                <div class="attendance-controls">
+
+                    <div class="attendance-control">
+                        <label>Class</label>
+
+                        <select>
+                            <option>B.Tech CSE - 3rd Semester</option>
+                            <option>B.Tech AI - 5th Semester</option>
+                            <option>B.Tech CSE - 4th Semester</option>
+                        </select>
+                    </div>
+
+                    <div class="attendance-control">
+                        <label>Subject</label>
+
+                        <select>
+                            <option>Python Programming</option>
+                            <option>Django Development</option>
+                            <option>Database Management</option>
+                        </select>
+                    </div>
+
+                    <div class="attendance-control">
+                        <label>Date</label>
+
+                        <input type="date" value="2026-10-07">
+                    </div>
+
+                </div>
+
+
+                <!-- Attendance Summary -->
+                <div class="attendance-summary">
+
+                    <div class="attendance-summary-card">
+                        <span>Total Students</span>
+                        <strong>32</strong>
+                    </div>
+
+                    <div class="attendance-summary-card present">
+                        <span>Present</span>
+                        <strong>28</strong>
+                    </div>
+
+                    <div class="attendance-summary-card absent">
+                        <span>Absent</span>
+                        <strong>4</strong>
+                    </div>
+
+                    <div class="attendance-summary-card percentage">
+                        <span>Attendance</span>
+                        <strong>87.5%</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Attendance Table -->
+                <div class="attendance-table-card">
+
+                    <div class="attendance-table-header">
+
+                        <div>
+                            <h2>Student Attendance</h2>
+                            <p>Mark attendance for the selected class</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-table-wrapper">
+
+                        <table class="attendance-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Roll No.</th>
+                                    <th>Previous Attendance</th>
+                                    <th>Today's Attendance</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <div class="attendance-student">
+
+                                            <div class="attendance-avatar">
+                                                AS
+                                            </div>
+
+                                            <div>
+                                                <strong>Aditya Sharma</strong>
+                                                <span>STU001</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>01</td>
+
+                                    <td>
+                                        <span class="attendance-good">
+                                            92%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="attendance-options">
+
+                                            <label class="attendance-option present-option">
+                                                <input type="radio" name="student1" checked>
+                                                <span>Present</span>
+                                            </label>
+
+                                            <label class="attendance-option absent-option">
+                                                <input type="radio" name="student1">
+                                                <span>Absent</span>
+                                            </label>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="attendance-student">
+
+                                            <div class="attendance-avatar">
+                                                RP
+                                            </div>
+
+                                            <div>
+                                                <strong>Rohit Patil</strong>
+                                                <span>STU002</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>02</td>
+
+                                    <td>
+                                        <span class="attendance-good">
+                                            88%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="attendance-options">
+
+                                            <label class="attendance-option present-option">
+                                                <input type="radio" name="student2" checked>
+                                                <span>Present</span>
+                                            </label>
+
+                                            <label class="attendance-option absent-option">
+                                                <input type="radio" name="student2">
+                                                <span>Absent</span>
+                                            </label>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="attendance-student">
+
+                                            <div class="attendance-avatar">
+                                                SK
+                                            </div>
+
+                                            <div>
+                                                <strong>Sneha Kulkarni</strong>
+                                                <span>STU003</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>03</td>
+
+                                    <td>
+                                        <span class="attendance-warning">
+                                            76%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="attendance-options">
+
+                                            <label class="attendance-option present-option">
+                                                <input type="radio" name="student3">
+                                                <span>Present</span>
+                                            </label>
+
+                                            <label class="attendance-option absent-option">
+                                                <input type="radio" name="student3" checked>
+                                                <span>Absent</span>
+                                            </label>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="attendance-student">
+
+                                            <div class="attendance-avatar">
+                                                VK
+                                            </div>
+
+                                            <div>
+                                                <strong>Vishal Kumar</strong>
+                                                <span>STU004</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>04</td>
+
+                                    <td>
+                                        <span class="attendance-low">
+                                            64%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="attendance-options">
+
+                                            <label class="attendance-option present-option">
+                                                <input type="radio" name="student4">
+                                                <span>Present</span>
+                                            </label>
+
+                                            <label class="attendance-option absent-option">
+                                                <input type="radio" name="student4" checked>
+                                                <span>Absent</span>
+                                            </label>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="attendance-student">
+
+                                            <div class="attendance-avatar">
+                                                NM
+                                            </div>
+
+                                            <div>
+                                                <strong>Neha More</strong>
+                                                <span>STU005</span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+
+                                    <td>05</td>
+
+                                    <td>
+                                        <span class="attendance-good">
+                                            95%
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="attendance-options">
+
+                                            <label class="attendance-option present-option">
+                                                <input type="radio" name="student5" checked>
+                                                <span>Present</span>
+                                            </label>
+
+                                            <label class="attendance-option absent-option">
+                                                <input type="radio" name="student5">
+                                                <span>Absent</span>
+                                            </label>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

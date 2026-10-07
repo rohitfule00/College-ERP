@@ -1,0 +1,455 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Fees Management{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <div>
+                    <h1>Fees Management</h1>
+                    <p>Manage student fees, payments and pending dues</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Record Payment
+                </button>
+            </div>
+
+
+            <!-- Fee Statistics -->
+            <div class="admin-overview-grid">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon blue">
+                        ₹
+                    </div>
+
+                    <div>
+                        <span>Total Fees</span>
+                        <strong>₹48.6 L</strong>
+                        <small>Current academic year</small>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon green">
+                        ₹
+                    </div>
+
+                    <div>
+                        <span>Collected</span>
+                        <strong>₹39.8 L</strong>
+                        <small>81.9% collected</small>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon orange">
+                        ₹
+                    </div>
+
+                    <div>
+                        <span>Pending</span>
+                        <strong>₹8.8 L</strong>
+                        <small>Pending collection</small>
+                    </div>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon red">
+                        !
+                    </div>
+
+                    <div>
+                        <span>Overdue</span>
+                        <strong>₹3.2 L</strong>
+                        <small>Needs attention</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Fee Overview -->
+            <div class="admin-dashboard-grid">
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h3>Fee Collection Overview</h3>
+                            <p>Current academic year</p>
+                        </div>
+
+                        <select class="admin-small-select">
+                            <option>2026-27</option>
+                            <option>2025-26</option>
+                        </select>
+                    </div>
+
+
+                    <div class="fee-progress-section">
+
+                        <div class="fee-progress-top">
+                            <span>Collection Progress</span>
+                            <strong>81.9%</strong>
+                        </div>
+
+                        <div class="fee-progress-bar">
+                            <div style="width:81.9%;"></div>
+                        </div>
+
+                        <div class="fee-progress-details">
+                            <span>Collected: ₹39.8 L</span>
+                            <span>Remaining: ₹8.8 L</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="fee-breakdown">
+
+                        <div>
+                            <span>Tuition Fees</span>
+                            <strong>₹31.4 L</strong>
+                        </div>
+
+                        <div>
+                            <span>Exam Fees</span>
+                            <strong>₹3.8 L</strong>
+                        </div>
+
+                        <div>
+                            <span>Library Fees</span>
+                            <strong>₹1.6 L</strong>
+                        </div>
+
+                        <div>
+                            <span>Other Fees</span>
+                            <strong>₹3.0 L</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Payment Summary -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h3>Payment Summary</h3>
+                            <p>Recent collection status</p>
+                        </div>
+                    </div>
+
+
+                    <div class="payment-summary-list">
+
+                        <div class="payment-summary-item">
+                            <div class="payment-summary-info">
+                                <span class="payment-dot green"></span>
+                                <span>Paid</span>
+                            </div>
+
+                            <strong>1,012</strong>
+                        </div>
+
+
+                        <div class="payment-summary-item">
+                            <div class="payment-summary-info">
+                                <span class="payment-dot orange"></span>
+                                <span>Partial Payment</span>
+                            </div>
+
+                            <strong>154</strong>
+                        </div>
+
+
+                        <div class="payment-summary-item">
+                            <div class="payment-summary-info">
+                                <span class="payment-dot red"></span>
+                                <span>Pending</span>
+                            </div>
+
+                            <strong>82</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="fee-alert-box">
+                        <strong>82 students have pending fees</strong>
+                        <p>Review overdue payments and send reminders.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Filters -->
+            <section class="admin-panel fee-table-panel">
+
+                <div class="admin-panel-header">
+                    <div>
+                        <h3>Student Fee Records</h3>
+                        <p>View and manage individual fee payments</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export Report
+                    </button>
+                </div>
+
+
+                <div class="fee-filters">
+
+                    <input
+                        type="text"
+                        placeholder="Search student name or ID..."
+                    >
+
+                    <select>
+                        <option>All Departments</option>
+                        <option>Computer Science</option>
+                        <option>Information Technology</option>
+                        <option>Electronics</option>
+                        <option>Mechanical</option>
+                    </select>
+
+                    <select>
+                        <option>All Years</option>
+                        <option>First Year</option>
+                        <option>Second Year</option>
+                        <option>Third Year</option>
+                        <option>Final Year</option>
+                    </select>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Paid</option>
+                        <option>Partial</option>
+                        <option>Pending</option>
+                        <option>Overdue</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Fee Table -->
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Student ID</th>
+                                <th>Department</th>
+                                <th>Total Fee</th>
+                                <th>Paid</th>
+                                <th>Balance</th>
+                                <th>Status</th>
+                                <th>Last Payment</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div class="table-avatar">RF</div>
+                                        <strong>Rohit Fule</strong>
+                                    </div>
+                                </td>
+
+                                <td>STU1024</td>
+                                <td>Computer Science</td>
+                                <td>₹85,000</td>
+                                <td>₹85,000</td>
+                                <td>₹0</td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>28 Sep 2026</td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div class="table-avatar">AS</div>
+                                        <strong>Aarav Sharma</strong>
+                                    </div>
+                                </td>
+
+                                <td>STU1031</td>
+                                <td>Information Technology</td>
+                                <td>₹82,000</td>
+                                <td>₹60,000</td>
+                                <td>₹22,000</td>
+
+                                <td>
+                                    <span class="status-badge warning">
+                                        Partial
+                                    </span>
+                                </td>
+
+                                <td>15 Sep 2026</td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div class="table-avatar">PS</div>
+                                        <strong>Priya Shah</strong>
+                                    </div>
+                                </td>
+
+                                <td>STU1042</td>
+                                <td>Electronics</td>
+                                <td>₹78,000</td>
+                                <td>₹40,000</td>
+                                <td>₹38,000</td>
+
+                                <td>
+                                    <span class="status-badge danger">
+                                        Overdue
+                                    </span>
+                                </td>
+
+                                <td>02 Aug 2026</td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div class="table-avatar">VK</div>
+                                        <strong>Vikas Kumar</strong>
+                                    </div>
+                                </td>
+
+                                <td>STU1056</td>
+                                <td>Mechanical</td>
+                                <td>₹80,000</td>
+                                <td>₹80,000</td>
+                                <td>₹0</td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>25 Sep 2026</td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="table-user">
+                                        <div class="table-avatar">NM</div>
+                                        <strong>Neha More</strong>
+                                    </div>
+                                </td>
+
+                                <td>STU1067</td>
+                                <td>Computer Science</td>
+                                <td>₹85,000</td>
+                                <td>₹50,000</td>
+                                <td>₹35,000</td>
+
+                                <td>
+                                    <span class="status-badge warning">
+                                        Partial
+                                    </span>
+                                </td>
+
+                                <td>10 Sep 2026</td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="pagination-buttons">
+
+                    <button>Previous</button>
+
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+
+                    <button>Next</button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

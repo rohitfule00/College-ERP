@@ -1,0 +1,268 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="settings-page">
+
+                <!-- Page Header -->
+                <div class="page-header">
+
+                    <div>
+                        <h1>Settings</h1>
+                        <p>Manage your account and portal preferences</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        Save Changes
+                    </button>
+
+                </div>
+
+
+                <!-- Account Settings -->
+                <div class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+                            <h2>Account Settings</h2>
+                            <p>Update your account information</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-grid">
+
+                        <div class="settings-field">
+
+                            <label>Email Address</label>
+
+                            <input type="email" value="priya.sharma@collegeerp.com">
+
+                        </div>
+
+
+                        <div class="settings-field">
+
+                            <label>Phone Number</label>
+
+                            <input type="text" value="+91 98765 43210">
+
+                        </div>
+
+
+                        <div class="settings-field">
+
+                            <label>Language</label>
+
+                            <select>
+                                <option>English</option>
+                                <option>Hindi</option>
+                                <option>Marathi</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="settings-field">
+
+                            <label>Time Zone</label>
+
+                            <select>
+                                <option>India Standard Time (IST)</option>
+                                <option>UTC</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Notification Settings -->
+                <div class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+                            <h2>Notification Settings</h2>
+                            <p>Choose how you want to receive notifications</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-options">
+
+                        <div class="settings-option">
+
+                            <div>
+                                <strong>Email Notifications</strong>
+                                <span>Receive important updates through email</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="settings-option">
+
+                            <div>
+                                <strong>Assignment Notifications</strong>
+                                <span>Get notified about assignment submissions</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="settings-option">
+
+                            <div>
+                                <strong>Attendance Alerts</strong>
+                                <span>Receive alerts about attendance updates</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="settings-option">
+
+                            <div>
+                                <strong>Notice Notifications</strong>
+                                <span>Get notified when new notices are published</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Security Settings -->
+                <div class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+                            <h2>Security</h2>
+                            <p>Manage your account security</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-row">
+
+                        <div class="security-info">
+
+                            <strong>Password</strong>
+
+                            <span>
+                                Last changed 30 days ago
+                            </span>
+
+                        </div>
+
+                        <button class="secondary-btn">
+                            Change Password
+                        </button>
+
+                    </div>
+
+
+                    <div class="security-row">
+
+                        <div class="security-info">
+
+                            <strong>Two-Factor Authentication</strong>
+
+                            <span>
+                                Add an extra layer of security to your account
+                            </span>
+
+                        </div>
+
+                        <button class="secondary-btn">
+                            Enable
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Danger Zone -->
+                <div class="settings-card danger-card">
+
+                    <div class="settings-card-header">
+
+                        <div>
+                            <h2>Account Actions</h2>
+                            <p>Actions related to your account</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-row">
+
+                        <div class="security-info">
+
+                            <strong>Logout from all devices</strong>
+
+                            <span>
+                                Sign out of your account from all active sessions
+                            </span>
+
+                        </div>
+
+                        <button class="danger-btn">
+                            Logout All
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

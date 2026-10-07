@@ -1,0 +1,174 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Classes{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="classes-page">
+
+                <div class="page-header">
+                    <div>
+                        <h1>My Classes</h1>
+                        <p>Manage your assigned classes and subjects</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        + Add Class
+                    </button>
+                </div>
+
+
+                <!-- Class Cards -->
+                <div class="classes-grid">
+
+                    <div class="class-card">
+
+                        <div class="class-card-top">
+                            <div class="class-icon">CS</div>
+
+                            <span class="class-status active">
+                                Active
+                            </span>
+                        </div>
+
+                        <h2>B.Tech CSE</h2>
+                        <p class="class-subject">Python Programming</p>
+
+                        <div class="class-info">
+                            <div>
+                                <span>Semester</span>
+                                <strong>3rd Semester</strong>
+                            </div>
+
+                            <div>
+                                <span>Students</span>
+                                <strong>32</strong>
+                            </div>
+                        </div>
+
+                        <div class="class-footer">
+                            <span>Room 204</span>
+                            <a href="#">View Class →</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="class-card">
+
+                        <div class="class-card-top">
+                            <div class="class-icon">AI</div>
+
+                            <span class="class-status active">
+                                Active
+                            </span>
+                        </div>
+
+                        <h2>B.Tech AI</h2>
+                        <p class="class-subject">Django Development</p>
+
+                        <div class="class-info">
+                            <div>
+                                <span>Semester</span>
+                                <strong>5th Semester</strong>
+                            </div>
+
+                            <div>
+                                <span>Students</span>
+                                <strong>28</strong>
+                            </div>
+                        </div>
+
+                        <div class="class-footer">
+                            <span>Room 301</span>
+                            <a href="#">View Class →</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="class-card">
+
+                        <div class="class-card-top">
+                            <div class="class-icon">DB</div>
+
+                            <span class="class-status active">
+                                Active
+                            </span>
+                        </div>
+
+                        <h2>B.Tech CSE</h2>
+                        <p class="class-subject">Database Management</p>
+
+                        <div class="class-info">
+                            <div>
+                                <span>Semester</span>
+                                <strong>4th Semester</strong>
+                            </div>
+
+                            <div>
+                                <span>Students</span>
+                                <strong>26</strong>
+                            </div>
+                        </div>
+
+                        <div class="class-footer">
+                            <span>Lab 102</span>
+                            <a href="#">View Class →</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="class-card">
+
+                        <div class="class-card-top">
+                            <div class="class-icon">WD</div>
+
+                            <span class="class-status active">
+                                Active
+                            </span>
+                        </div>
+
+                        <h2>B.Tech CSE</h2>
+                        <p class="class-subject">Web Development</p>
+
+                        <div class="class-info">
+                            <div>
+                                <span>Semester</span>
+                                <strong>2nd Semester</strong>
+                            </div>
+
+                            <div>
+                                <span>Students</span>
+                                <strong>24</strong>
+                            </div>
+                        </div>
+
+                        <div class="class-footer">
+                            <span>Room 205</span>
+                            <a href="#">View Class →</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

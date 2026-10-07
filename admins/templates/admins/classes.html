@@ -1,0 +1,392 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Classes | Admin Portal{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header classes-header">
+
+                <div>
+                    <h1>Classes</h1>
+                    <p>Manage classes, batches and assigned academic details</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Add Class
+                </button>
+
+            </div>
+
+
+            <!-- Class Statistics -->
+            <div class="class-stats-grid">
+
+                <div class="class-stat-card">
+                    <div class="class-stat-icon blue">🏫</div>
+                    <div>
+                        <span>Total Classes</span>
+                        <strong>36</strong>
+                    </div>
+                </div>
+
+                <div class="class-stat-card">
+                    <div class="class-stat-icon green">👨‍🎓</div>
+                    <div>
+                        <span>Total Students</span>
+                        <strong>1,248</strong>
+                    </div>
+                </div>
+
+                <div class="class-stat-card">
+                    <div class="class-stat-icon purple">👨‍🏫</div>
+                    <div>
+                        <span>Class Teachers</span>
+                        <strong>36</strong>
+                    </div>
+                </div>
+
+                <div class="class-stat-card">
+                    <div class="class-stat-icon orange">📚</div>
+                    <div>
+                        <span>Active Batches</span>
+                        <strong>36</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="classes-filter-panel">
+
+                <div class="classes-search">
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M16 16L21 21"></path>
+                    </svg>
+
+                    <input
+                        type="text"
+                        placeholder="Search classes or batch names..."
+                    >
+
+                </div>
+
+                <select>
+                    <option>All Departments</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                </select>
+
+                <select>
+                    <option>All Years</option>
+                    <option>First Year</option>
+                    <option>Second Year</option>
+                    <option>Third Year</option>
+                    <option>Final Year</option>
+                </select>
+
+                <select>
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                </select>
+
+            </div>
+
+
+            <!-- Classes Table -->
+            <div class="classes-table-panel">
+
+                <div class="classes-table-header">
+
+                    <div>
+                        <h3>Class List</h3>
+                        <p>Showing 1–5 of 36 classes</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export
+                    </button>
+
+                </div>
+
+
+                <div class="classes-table-wrapper">
+
+                    <table class="classes-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Class</th>
+                                <th>Department</th>
+                                <th>Year</th>
+                                <th>Section</th>
+                                <th>Class Teacher</th>
+                                <th>Students</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <div class="class-info">
+
+                                        <div class="class-icon blue">
+                                            CS
+                                        </div>
+
+                                        <div>
+                                            <strong>TY B.Tech CSE</strong>
+                                            <span>Batch 2026–27</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Computer Science</td>
+                                <td>Third Year</td>
+                                <td>A</td>
+                                <td>Dr. Priya Sharma</td>
+                                <td>72</td>
+
+                                <td>
+                                    <span class="class-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="class-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="class-info">
+
+                                        <div class="class-icon green">
+                                            IT
+                                        </div>
+
+                                        <div>
+                                            <strong>TY B.Tech IT</strong>
+                                            <span>Batch 2026–27</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Information Technology</td>
+                                <td>Third Year</td>
+                                <td>A</td>
+                                <td>Prof. Amit More</td>
+                                <td>65</td>
+
+                                <td>
+                                    <span class="class-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="class-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="class-info">
+
+                                        <div class="class-icon purple">
+                                            EC
+                                        </div>
+
+                                        <div>
+                                            <strong>SY B.Tech ECE</strong>
+                                            <span>Batch 2026–27</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Electronics</td>
+                                <td>Second Year</td>
+                                <td>A</td>
+                                <td>Dr. Sneha Kulkarni</td>
+                                <td>58</td>
+
+                                <td>
+                                    <span class="class-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="class-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="class-info">
+
+                                        <div class="class-icon orange">
+                                            ME
+                                        </div>
+
+                                        <div>
+                                            <strong>Final Year Mechanical</strong>
+                                            <span>Batch 2026–27</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Mechanical</td>
+                                <td>Final Year</td>
+                                <td>A</td>
+                                <td>Prof. Rahul Verma</td>
+                                <td>51</td>
+
+                                <td>
+                                    <span class="class-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="class-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="class-info">
+
+                                        <div class="class-icon blue">
+                                            CE
+                                        </div>
+
+                                        <div>
+                                            <strong>SY B.Tech Civil</strong>
+                                            <span>Batch 2026–27</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>Civil Engineering</td>
+                                <td>Second Year</td>
+                                <td>B</td>
+                                <td>Prof. Neha Patil</td>
+                                <td>47</td>
+
+                                <td>
+                                    <span class="class-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="class-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="classes-pagination">
+
+                    <span>Showing 1 to 5 of 36 classes</span>
+
+                    <div class="pagination-buttons">
+
+                        <button disabled>‹</button>
+
+                        <button class="current">
+                            1
+                        </button>
+
+                        <button>
+                            2
+                        </button>
+
+                        <button>
+                            3
+                        </button>
+
+                        <button>
+                            ...
+                        </button>
+
+                        <button>
+                            8
+                        </button>
+
+                        <button>
+                            ›
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

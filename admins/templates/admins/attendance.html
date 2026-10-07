@@ -1,0 +1,414 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Attendance | Admin Portal{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header attendance-page-header">
+
+                <div>
+                    <h1>Attendance</h1>
+                    <p>Monitor student attendance and daily attendance records.</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Mark Attendance
+                </button>
+
+            </div>
+
+
+            <!-- Attendance Statistics -->
+            <div class="admin-overview-grid attendance-stats-grid">
+
+                <div class="admin-panel attendance-stat-card">
+                    <div class="attendance-stat-icon">👨‍🎓</div>
+                    <div>
+                        <span>Total Students</span>
+                        <strong>1,248</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel attendance-stat-card">
+                    <div class="attendance-stat-icon present-icon">✓</div>
+                    <div>
+                        <span>Present Today</span>
+                        <strong>1,106</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel attendance-stat-card">
+                    <div class="attendance-stat-icon absent-icon">✕</div>
+                    <div>
+                        <span>Absent Today</span>
+                        <strong>98</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel attendance-stat-card">
+                    <div class="attendance-stat-icon late-icon">◷</div>
+                    <div>
+                        <span>Late Today</span>
+                        <strong>44</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Attendance Overview -->
+            <div class="attendance-dashboard-grid">
+
+                <div class="admin-panel attendance-overview-panel">
+
+                    <div class="attendance-panel-header">
+                        <div>
+                            <h3>Today's Attendance</h3>
+                            <p>Overall student attendance percentage</p>
+                        </div>
+
+                        <span class="attendance-date">
+                            07 Oct 2026
+                        </span>
+                    </div>
+
+                    <div class="attendance-percentage">
+                        <strong>88.6%</strong>
+                        <span>Overall Attendance</span>
+                    </div>
+
+                    <div class="attendance-progress">
+                        <div class="attendance-progress-fill"></div>
+                    </div>
+
+                    <div class="attendance-breakdown">
+
+                        <div>
+                            <span class="attendance-dot present"></span>
+                            <p>Present</p>
+                            <strong>88.6%</strong>
+                        </div>
+
+                        <div>
+                            <span class="attendance-dot absent"></span>
+                            <p>Absent</p>
+                            <strong>7.9%</strong>
+                        </div>
+
+                        <div>
+                            <span class="attendance-dot late"></span>
+                            <p>Late</p>
+                            <strong>3.5%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Department Attendance -->
+                <div class="admin-panel attendance-department-panel">
+
+                    <div class="attendance-panel-header">
+                        <div>
+                            <h3>Department Attendance</h3>
+                            <p>Today's attendance by department</p>
+                        </div>
+                    </div>
+
+                    <div class="department-attendance-list">
+
+                        <div class="department-attendance-item">
+                            <div>
+                                <span>Computer Science</span>
+                                <strong>94%</strong>
+                            </div>
+                            <div class="department-progress">
+                                <div style="width:94%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="department-attendance-item">
+                            <div>
+                                <span>Information Technology</span>
+                                <strong>91%</strong>
+                            </div>
+                            <div class="department-progress">
+                                <div style="width:91%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="department-attendance-item">
+                            <div>
+                                <span>AI & Data Science</span>
+                                <strong>89%</strong>
+                            </div>
+                            <div class="department-progress">
+                                <div style="width:89%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="department-attendance-item">
+                            <div>
+                                <span>Electronics</span>
+                                <strong>86%</strong>
+                            </div>
+                            <div class="department-progress">
+                                <div style="width:86%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="department-attendance-item">
+                            <div>
+                                <span>Mechanical</span>
+                                <strong>82%</strong>
+                            </div>
+                            <div class="department-progress">
+                                <div style="width:82%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="admin-panel attendance-filter-panel">
+
+                <div class="attendance-filter-row">
+
+                    <div class="attendance-search-box">
+                        <span>⌕</span>
+                        <input
+                            type="text"
+                            placeholder="Search student..."
+                        >
+                    </div>
+
+                    <input type="date" value="2026-10-07">
+
+                    <select>
+                        <option>All Departments</option>
+                        <option>Computer Science</option>
+                        <option>Information Technology</option>
+                        <option>AI & Data Science</option>
+                        <option>Electronics</option>
+                        <option>Mechanical</option>
+                    </select>
+
+                    <select>
+                        <option>All Classes</option>
+                        <option>FY CSE A</option>
+                        <option>SY CSE A</option>
+                        <option>TY CSE A</option>
+                        <option>Final Year CSE A</option>
+                    </select>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Present</option>
+                        <option>Absent</option>
+                        <option>Late</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Attendance Table -->
+            <div class="admin-panel attendance-table-panel">
+
+                <div class="attendance-table-header">
+
+                    <div>
+                        <h3>Attendance Records</h3>
+                        <p>Today's student attendance records</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export Report
+                    </button>
+
+                </div>
+
+
+                <div class="attendance-table-wrapper">
+
+                    <table class="attendance-table">
+
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Department</th>
+                                <th>Class</th>
+                                <th>Date</th>
+                                <th>Check In</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>STU00124</strong></td>
+                                <td>Rohit Fule</td>
+                                <td>Computer Science</td>
+                                <td>TY CSE A</td>
+                                <td>07 Oct 2026</td>
+                                <td>08:42 AM</td>
+                                <td>
+                                    <span class="attendance-status present">
+                                        Present
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>STU00125</strong></td>
+                                <td>Aditya Patil</td>
+                                <td>Computer Science</td>
+                                <td>TY CSE A</td>
+                                <td>07 Oct 2026</td>
+                                <td>08:46 AM</td>
+                                <td>
+                                    <span class="attendance-status present">
+                                        Present
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>STU00126</strong></td>
+                                <td>Priya Sharma</td>
+                                <td>Information Technology</td>
+                                <td>SY IT A</td>
+                                <td>07 Oct 2026</td>
+                                <td>08:51 AM</td>
+                                <td>
+                                    <span class="attendance-status late">
+                                        Late
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>STU00127</strong></td>
+                                <td>Neha Kulkarni</td>
+                                <td>AI & Data Science</td>
+                                <td>TY AI A</td>
+                                <td>07 Oct 2026</td>
+                                <td>—</td>
+                                <td>
+                                    <span class="attendance-status absent">
+                                        Absent
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>STU00128</strong></td>
+                                <td>Akash Jadhav</td>
+                                <td>Electronics</td>
+                                <td>SY ECE A</td>
+                                <td>07 Oct 2026</td>
+                                <td>08:39 AM</td>
+                                <td>
+                                    <span class="attendance-status present">
+                                        Present
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>STU00129</strong></td>
+                                <td>Sneha More</td>
+                                <td>Mechanical</td>
+                                <td>TY ME A</td>
+                                <td>07 Oct 2026</td>
+                                <td>08:58 AM</td>
+                                <td>
+                                    <span class="attendance-status late">
+                                        Late
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>STU00130</strong></td>
+                                <td>Om Mule</td>
+                                <td>Computer Science</td>
+                                <td>FY CSE A</td>
+                                <td>07 Oct 2026</td>
+                                <td>08:35 AM</td>
+                                <td>
+                                    <span class="attendance-status present">
+                                        Present
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>STU00131</strong></td>
+                                <td>Tanvi Deshmukh</td>
+                                <td>Information Technology</td>
+                                <td>TY IT A</td>
+                                <td>07 Oct 2026</td>
+                                <td>—</td>
+                                <td>
+                                    <span class="attendance-status absent">
+                                        Absent
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="attendance-pagination">
+
+                    <span>Showing 1 to 8 of 1,248 records</span>
+
+                    <div class="pagination-buttons">
+
+                        <button disabled>Previous</button>
+                        <button class="active-page">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>Next</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

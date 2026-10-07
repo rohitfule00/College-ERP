@@ -1,0 +1,445 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Reports Management{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <div>
+                    <h1>Reports</h1>
+                    <p>View and generate college performance reports</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    Generate Report
+                </button>
+            </div>
+
+
+            <!-- Report Statistics -->
+            <div class="admin-overview-grid">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon blue">R</div>
+                    <div>
+                        <span>Total Reports</span>
+                        <strong>128</strong>
+                        <small>Generated this year</small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon green">A</div>
+                    <div>
+                        <span>Academic Reports</span>
+                        <strong>46</strong>
+                        <small>Academic performance</small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon orange">F</div>
+                    <div>
+                        <span>Financial Reports</span>
+                        <strong>31</strong>
+                        <small>Fees and collections</small>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon purple">P</div>
+                    <div>
+                        <span>Attendance Reports</span>
+                        <strong>51</strong>
+                        <small>Attendance records</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Report Categories -->
+            <div class="admin-dashboard-grid">
+
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h3>Report Categories</h3>
+                            <p>Available reports</p>
+                        </div>
+                    </div>
+
+                    <div class="report-category-list">
+
+                        <div class="report-category-item">
+                            <div class="report-category-icon blue">
+                                A
+                            </div>
+
+                            <div>
+                                <strong>Academic Reports</strong>
+                                <span>Results, grades and performance</span>
+                            </div>
+
+                            <button class="report-view-btn">
+                                View
+                            </button>
+                        </div>
+
+
+                        <div class="report-category-item">
+                            <div class="report-category-icon green">
+                                S
+                            </div>
+
+                            <div>
+                                <strong>Student Reports</strong>
+                                <span>Student enrollment and records</span>
+                            </div>
+
+                            <button class="report-view-btn">
+                                View
+                            </button>
+                        </div>
+
+
+                        <div class="report-category-item">
+                            <div class="report-category-icon orange">
+                                F
+                            </div>
+
+                            <div>
+                                <strong>Financial Reports</strong>
+                                <span>Fees and payment collections</span>
+                            </div>
+
+                            <button class="report-view-btn">
+                                View
+                            </button>
+                        </div>
+
+
+                        <div class="report-category-item">
+                            <div class="report-category-icon purple">
+                                T
+                            </div>
+
+                            <div>
+                                <strong>Teacher Reports</strong>
+                                <span>Faculty and teaching statistics</span>
+                            </div>
+
+                            <button class="report-view-btn">
+                                View
+                            </button>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Quick Reports -->
+                <section class="admin-panel">
+
+                    <div class="admin-panel-header">
+                        <div>
+                            <h3>Quick Reports</h3>
+                            <p>Frequently used reports</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-report-list">
+
+                        <button class="quick-report-btn">
+                            <span>Student Enrollment Report</span>
+                            <small>Generate</small>
+                        </button>
+
+                        <button class="quick-report-btn">
+                            <span>Attendance Summary</span>
+                            <small>Generate</small>
+                        </button>
+
+                        <button class="quick-report-btn">
+                            <span>Fee Collection Report</span>
+                            <small>Generate</small>
+                        </button>
+
+                        <button class="quick-report-btn">
+                            <span>Academic Performance</span>
+                            <small>Generate</small>
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Generated Reports -->
+            <section class="admin-panel report-table-panel">
+
+                <div class="admin-panel-header">
+
+                    <div>
+                        <h3>Generated Reports</h3>
+                        <p>Recently generated reports</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export List
+                    </button>
+
+                </div>
+
+
+                <!-- Filters -->
+                <div class="report-filters">
+
+                    <input
+                        type="text"
+                        placeholder="Search report..."
+                    >
+
+                    <select>
+                        <option>All Categories</option>
+                        <option>Academic</option>
+                        <option>Student</option>
+                        <option>Financial</option>
+                        <option>Attendance</option>
+                        <option>Teacher</option>
+                    </select>
+
+                    <select>
+                        <option>All Formats</option>
+                        <option>PDF</option>
+                        <option>Excel</option>
+                        <option>CSV</option>
+                    </select>
+
+                    <select>
+                        <option>All Dates</option>
+                        <option>Today</option>
+                        <option>This Week</option>
+                        <option>This Month</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Table -->
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Report Name</th>
+                                <th>Category</th>
+                                <th>Generated By</th>
+                                <th>Date</th>
+                                <th>Format</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="report-name">
+                                        <strong>Academic Performance Report</strong>
+                                        <span>Semester examination performance</span>
+                                    </div>
+                                </td>
+
+                                <td>Academic</td>
+                                <td>Admin User</td>
+                                <td>07 Oct 2026</td>
+                                <td>
+                                    <span class="format-badge pdf">
+                                        PDF
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        Download
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="report-name">
+                                        <strong>Student Enrollment Report</strong>
+                                        <span>Department-wise student enrollment</span>
+                                    </div>
+                                </td>
+
+                                <td>Student</td>
+                                <td>Admin User</td>
+                                <td>06 Oct 2026</td>
+                                <td>
+                                    <span class="format-badge excel">
+                                        Excel
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        Download
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="report-name">
+                                        <strong>Fee Collection Report</strong>
+                                        <span>Current academic year fee collection</span>
+                                    </div>
+                                </td>
+
+                                <td>Financial</td>
+                                <td>Admin User</td>
+                                <td>05 Oct 2026</td>
+                                <td>
+                                    <span class="format-badge pdf">
+                                        PDF
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        Download
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="report-name">
+                                        <strong>Attendance Summary</strong>
+                                        <span>Monthly attendance statistics</span>
+                                    </div>
+                                </td>
+
+                                <td>Attendance</td>
+                                <td>Admin User</td>
+                                <td>03 Oct 2026</td>
+                                <td>
+                                    <span class="format-badge csv">
+                                        CSV
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge success">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        Download
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="report-name">
+                                        <strong>Teacher Workload Report</strong>
+                                        <span>Faculty workload and class allocation</span>
+                                    </div>
+                                </td>
+
+                                <td>Teacher</td>
+                                <td>Admin User</td>
+                                <td>01 Oct 2026</td>
+                                <td>
+                                    <span class="format-badge excel">
+                                        Excel
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge warning">
+                                        Processing
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="table-action-btn">
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="pagination-buttons">
+
+                    <button>Previous</button>
+
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+
+                    <button>Next</button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

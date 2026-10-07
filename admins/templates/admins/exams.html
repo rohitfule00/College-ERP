@@ -1,0 +1,452 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Exams | Admin Portal{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header exams-page-header">
+
+                <div>
+                    <h1>Exams</h1>
+                    <p>Manage examinations, schedules and academic sessions.</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Create Exam
+                </button>
+
+            </div>
+
+
+            <!-- Exam Statistics -->
+            <div class="admin-overview-grid exams-stats-grid">
+
+                <div class="admin-panel exams-stat-card">
+                    <div class="exams-stat-icon">📝</div>
+                    <div>
+                        <span>Total Exams</span>
+                        <strong>24</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel exams-stat-card">
+                    <div class="exams-stat-icon upcoming-icon">◷</div>
+                    <div>
+                        <span>Upcoming Exams</span>
+                        <strong>8</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel exams-stat-card">
+                    <div class="exams-stat-icon ongoing-icon">●</div>
+                    <div>
+                        <span>Ongoing</span>
+                        <strong>3</strong>
+                    </div>
+                </div>
+
+                <div class="admin-panel exams-stat-card">
+                    <div class="exams-stat-icon completed-icon">✓</div>
+                    <div>
+                        <span>Completed</span>
+                        <strong>13</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Exam Overview -->
+            <div class="exams-overview-grid">
+
+                <div class="admin-panel exams-calendar-panel">
+
+                    <div class="exams-panel-header">
+
+                        <div>
+                            <h3>Upcoming Examinations</h3>
+                            <p>Scheduled examinations for the current academic year</p>
+                        </div>
+
+                        <select class="exams-year-select">
+                            <option>2026-27</option>
+                            <option>2025-26</option>
+                        </select>
+
+                    </div>
+
+                    <div class="exam-list">
+
+                        <div class="exam-item">
+
+                            <div class="exam-date">
+                                <strong>15</strong>
+                                <span>OCT</span>
+                            </div>
+
+                            <div class="exam-info">
+                                <strong>Mid Semester Examination</strong>
+                                <span>Computer Science • Semester 5</span>
+                            </div>
+
+                            <span class="exam-status upcoming">
+                                Upcoming
+                            </span>
+
+                        </div>
+
+
+                        <div class="exam-item">
+
+                            <div class="exam-date">
+                                <strong>21</strong>
+                                <span>OCT</span>
+                            </div>
+
+                            <div class="exam-info">
+                                <strong>Internal Assessment</strong>
+                                <span>Information Technology • Semester 3</span>
+                            </div>
+
+                            <span class="exam-status upcoming">
+                                Upcoming
+                            </span>
+
+                        </div>
+
+
+                        <div class="exam-item">
+
+                            <div class="exam-date">
+                                <strong>28</strong>
+                                <span>OCT</span>
+                            </div>
+
+                            <div class="exam-info">
+                                <strong>Practical Examination</strong>
+                                <span>AI & Data Science • Semester 6</span>
+                            </div>
+
+                            <span class="exam-status upcoming">
+                                Upcoming
+                            </span>
+
+                        </div>
+
+
+                        <div class="exam-item">
+
+                            <div class="exam-date">
+                                <strong>04</strong>
+                                <span>NOV</span>
+                            </div>
+
+                            <div class="exam-info">
+                                <strong>End Semester Examination</strong>
+                                <span>All Departments • Semester 7</span>
+                            </div>
+
+                            <span class="exam-status scheduled">
+                                Scheduled
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Exam Summary -->
+                <div class="admin-panel exams-summary-panel">
+
+                    <div class="exams-panel-header">
+                        <div>
+                            <h3>Exam Summary</h3>
+                            <p>Current examination status</p>
+                        </div>
+                    </div>
+
+                    <div class="exam-summary-list">
+
+                        <div class="exam-summary-row">
+                            <span>Upcoming</span>
+                            <strong>8</strong>
+                        </div>
+
+                        <div class="exam-summary-row">
+                            <span>Ongoing</span>
+                            <strong>3</strong>
+                        </div>
+
+                        <div class="exam-summary-row">
+                            <span>Completed</span>
+                            <strong>13</strong>
+                        </div>
+
+                        <div class="exam-summary-total">
+                            <span>Total Exams</span>
+                            <strong>24</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="admin-panel exams-filter-panel">
+
+                <div class="exams-filter-row">
+
+                    <div class="exams-search-box">
+                        <span>⌕</span>
+                        <input
+                            type="text"
+                            placeholder="Search exams..."
+                        >
+                    </div>
+
+                    <select>
+                        <option>All Departments</option>
+                        <option>Computer Science</option>
+                        <option>Information Technology</option>
+                        <option>AI & Data Science</option>
+                        <option>Electronics</option>
+                        <option>Mechanical</option>
+                    </select>
+
+                    <select>
+                        <option>All Exam Types</option>
+                        <option>Mid Semester</option>
+                        <option>Internal Assessment</option>
+                        <option>Practical</option>
+                        <option>End Semester</option>
+                    </select>
+
+                    <select>
+                        <option>All Semesters</option>
+                        <option>Semester 1</option>
+                        <option>Semester 2</option>
+                        <option>Semester 3</option>
+                        <option>Semester 4</option>
+                        <option>Semester 5</option>
+                        <option>Semester 6</option>
+                        <option>Semester 7</option>
+                        <option>Semester 8</option>
+                    </select>
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Upcoming</option>
+                        <option>Ongoing</option>
+                        <option>Completed</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Exam Table -->
+            <div class="admin-panel exams-table-panel">
+
+                <div class="exams-table-header">
+
+                    <div>
+                        <h3>Examination Schedule</h3>
+                        <p>Manage all scheduled examinations</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export Schedule
+                    </button>
+
+                </div>
+
+
+                <div class="exams-table-wrapper">
+
+                    <table class="exams-table">
+
+                        <thead>
+                            <tr>
+                                <th>Exam</th>
+                                <th>Type</th>
+                                <th>Department</th>
+                                <th>Semester</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Students</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <strong>Mid Semester Examination</strong>
+                                </td>
+                                <td>Mid Semester</td>
+                                <td>Computer Science</td>
+                                <td>Semester 5</td>
+                                <td>15 Oct 2026</td>
+                                <td>20 Oct 2026</td>
+                                <td>124</td>
+                                <td>
+                                    <span class="exam-table-status upcoming">
+                                        Upcoming
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="exam-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Internal Assessment - II</strong>
+                                </td>
+                                <td>Internal</td>
+                                <td>Information Technology</td>
+                                <td>Semester 3</td>
+                                <td>21 Oct 2026</td>
+                                <td>24 Oct 2026</td>
+                                <td>108</td>
+                                <td>
+                                    <span class="exam-table-status upcoming">
+                                        Upcoming
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="exam-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Practical Examination</strong>
+                                </td>
+                                <td>Practical</td>
+                                <td>AI & Data Science</td>
+                                <td>Semester 6</td>
+                                <td>28 Oct 2026</td>
+                                <td>31 Oct 2026</td>
+                                <td>92</td>
+                                <td>
+                                    <span class="exam-table-status upcoming">
+                                        Upcoming
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="exam-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>End Semester Examination</strong>
+                                </td>
+                                <td>End Semester</td>
+                                <td>Electronics</td>
+                                <td>Semester 7</td>
+                                <td>04 Nov 2026</td>
+                                <td>12 Nov 2026</td>
+                                <td>84</td>
+                                <td>
+                                    <span class="exam-table-status scheduled">
+                                        Scheduled
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="exam-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Unit Test - I</strong>
+                                </td>
+                                <td>Internal</td>
+                                <td>Mechanical</td>
+                                <td>Semester 3</td>
+                                <td>02 Sep 2026</td>
+                                <td>05 Sep 2026</td>
+                                <td>76</td>
+                                <td>
+                                    <span class="exam-table-status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="exam-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Mid Semester Examination</strong>
+                                </td>
+                                <td>Mid Semester</td>
+                                <td>Computer Science</td>
+                                <td>Semester 3</td>
+                                <td>10 Sep 2026</td>
+                                <td>15 Sep 2026</td>
+                                <td>118</td>
+                                <td>
+                                    <span class="exam-table-status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="exam-action-btn">⋮</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="exams-pagination">
+
+                    <span>Showing 1 to 6 of 24 examinations</span>
+
+                    <div class="pagination-buttons">
+                        <button disabled>Previous</button>
+                        <button class="active-page">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>Next</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

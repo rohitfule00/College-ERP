@@ -1,0 +1,391 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Courses | Admin Portal{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header courses-header">
+
+                <div>
+                    <h1>Courses</h1>
+                    <p>Manage academic courses and course information</p>
+                </div>
+
+                <button class="admin-primary-btn">
+                    + Add Course
+                </button>
+
+            </div>
+
+
+            <!-- Course Statistics -->
+            <div class="course-stats-grid">
+
+                <div class="course-stat-card">
+                    <div class="course-stat-icon blue">📚</div>
+                    <div>
+                        <span>Total Courses</span>
+                        <strong>48</strong>
+                    </div>
+                </div>
+
+                <div class="course-stat-card">
+                    <div class="course-stat-icon green">✓</div>
+                    <div>
+                        <span>Active Courses</span>
+                        <strong>44</strong>
+                    </div>
+                </div>
+
+                <div class="course-stat-card">
+                    <div class="course-stat-icon purple">🏢</div>
+                    <div>
+                        <span>Departments</span>
+                        <strong>12</strong>
+                    </div>
+                </div>
+
+                <div class="course-stat-card">
+                    <div class="course-stat-icon orange">👨‍🎓</div>
+                    <div>
+                        <span>Enrolled Students</span>
+                        <strong>1,248</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="courses-filter-panel">
+
+                <div class="courses-search">
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="M16 16L21 21"></path>
+                    </svg>
+
+                    <input
+                        type="text"
+                        placeholder="Search courses by name or code..."
+                    >
+
+                </div>
+
+                <select>
+                    <option>All Departments</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                </select>
+
+                <select>
+                    <option>All Levels</option>
+                    <option>Undergraduate</option>
+                    <option>Postgraduate</option>
+                    <option>Diploma</option>
+                </select>
+
+                <select>
+                    <option>All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                </select>
+
+            </div>
+
+
+            <!-- Course Table -->
+            <div class="courses-table-panel">
+
+                <div class="courses-table-header">
+
+                    <div>
+                        <h3>Course List</h3>
+                        <p>Showing 1–5 of 48 courses</p>
+                    </div>
+
+                    <button class="admin-secondary-btn">
+                        Export
+                    </button>
+
+                </div>
+
+
+                <div class="courses-table-wrapper">
+
+                    <table class="courses-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Course</th>
+                                <th>Course Code</th>
+                                <th>Department</th>
+                                <th>Level</th>
+                                <th>Duration</th>
+                                <th>Students</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <div class="course-info">
+
+                                        <div class="course-icon blue">
+                                            CS
+                                        </div>
+
+                                        <div>
+                                            <strong>B.Tech Computer Science</strong>
+                                            <span>Engineering Program</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>BTCS</td>
+                                <td>Computer Science</td>
+                                <td>Undergraduate</td>
+                                <td>4 Years</td>
+                                <td>286</td>
+
+                                <td>
+                                    <span class="course-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="course-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="course-info">
+
+                                        <div class="course-icon green">
+                                            IT
+                                        </div>
+
+                                        <div>
+                                            <strong>B.Tech Information Technology</strong>
+                                            <span>Engineering Program</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>BTIT</td>
+                                <td>Information Technology</td>
+                                <td>Undergraduate</td>
+                                <td>4 Years</td>
+                                <td>245</td>
+
+                                <td>
+                                    <span class="course-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="course-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="course-info">
+
+                                        <div class="course-icon purple">
+                                            EC
+                                        </div>
+
+                                        <div>
+                                            <strong>B.Tech Electronics</strong>
+                                            <span>Engineering Program</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>BTEC</td>
+                                <td>Electronics</td>
+                                <td>Undergraduate</td>
+                                <td>4 Years</td>
+                                <td>198</td>
+
+                                <td>
+                                    <span class="course-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="course-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="course-info">
+
+                                        <div class="course-icon orange">
+                                            ME
+                                        </div>
+
+                                        <div>
+                                            <strong>B.Tech Mechanical Engineering</strong>
+                                            <span>Engineering Program</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>BTME</td>
+                                <td>Mechanical</td>
+                                <td>Undergraduate</td>
+                                <td>4 Years</td>
+                                <td>176</td>
+
+                                <td>
+                                    <span class="course-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="course-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="course-info">
+
+                                        <div class="course-icon blue">
+                                            CE
+                                        </div>
+
+                                        <div>
+                                            <strong>B.Tech Civil Engineering</strong>
+                                            <span>Engineering Program</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>BTCE</td>
+                                <td>Civil Engineering</td>
+                                <td>Undergraduate</td>
+                                <td>4 Years</td>
+                                <td>143</td>
+
+                                <td>
+                                    <span class="course-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="course-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Pagination -->
+                <div class="courses-pagination">
+
+                    <span>Showing 1 to 5 of 48 courses</span>
+
+                    <div class="pagination-buttons">
+
+                        <button disabled>‹</button>
+
+                        <button class="current">
+                            1
+                        </button>
+
+                        <button>
+                            2
+                        </button>
+
+                        <button>
+                            3
+                        </button>
+
+                        <button>
+                            ...
+                        </button>
+
+                        <button>
+                            10
+                        </button>
+
+                        <button>
+                            ›
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Teacher Profile{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="profile-page">
+
+                <!-- Profile Header -->
+                <div class="profile-header">
+
+                    <div class="profile-avatar">
+                        PS
+                    </div>
+
+                    <div class="profile-header-info">
+                        <h1>Dr. Priya Sharma</h1>
+                        <p>Senior Faculty • Computer Science & Engineering</p>
+                        <span>Employee ID: TCH001</span>
+                    </div>
+
+                    <button class="profile-edit-btn">
+                        Edit Profile
+                    </button>
+
+                </div>
+
+
+                <!-- Personal Information -->
+                <div class="profile-card">
+
+                    <div class="profile-card-header">
+                        <div>
+                            <h2>Personal Information</h2>
+                            <p>Your basic personal details</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-grid">
+
+                        <div class="profile-field">
+                            <label>Full Name</label>
+                            <p>Dr. Priya Sharma</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Email Address</label>
+                            <p>priya.sharma@collegeerp.com</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Phone Number</label>
+                            <p>+91 98765 43210</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Date of Birth</label>
+                            <p>15 March 1988</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Gender</label>
+                            <p>Female</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Blood Group</label>
+                            <p>O+</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Professional Information -->
+                <div class="profile-card">
+
+                    <div class="profile-card-header">
+                        <div>
+                            <h2>Professional Information</h2>
+                            <p>Your academic and employment details</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-grid">
+
+                        <div class="profile-field">
+                            <label>Employee ID</label>
+                            <p>TCH001</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Department</label>
+                            <p>Computer Science & Engineering</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Designation</label>
+                            <p>Senior Faculty</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Qualification</label>
+                            <p>Ph.D. in Computer Science</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Experience</label>
+                            <p>8 Years</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Joining Date</label>
+                            <p>10 July 2018</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Information -->
+                <div class="profile-card">
+
+                    <div class="profile-card-header">
+                        <div>
+                            <h2>Contact Information</h2>
+                            <p>Your contact and address details</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-grid">
+
+                        <div class="profile-field profile-field-full">
+                            <label>Address</label>
+                            <p>
+                                123, College Road, Pune, Maharashtra - 411001
+                            </p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Emergency Contact</label>
+                            <p>Raj Sharma</p>
+                        </div>
+
+                        <div class="profile-field">
+                            <label>Emergency Phone</label>
+                            <p>+91 98765 12345</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

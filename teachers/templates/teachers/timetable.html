@@ -1,0 +1,376 @@
+{% extends 'teachers/main.html' %}
+
+{% block title %}Timetable{% endblock %}
+
+{% block content %}
+
+<div class="teacher-layout">
+
+    {% include "teachers/teacher_sidebar.html" %}
+
+    <div class="teacher-main">
+
+        {% include "teachers/teacher_nav.html" %}
+
+        <main class="teacher-content">
+
+            <div class="timetable-page">
+
+                <!-- Page Header -->
+                <div class="page-header">
+
+                    <div>
+                        <h1>Timetable</h1>
+                        <p>View your weekly teaching schedule</p>
+                    </div>
+
+                    <button class="primary-btn">
+                        + Add Schedule
+                    </button>
+
+                </div>
+
+
+                <!-- Week Controls -->
+                <div class="timetable-controls">
+
+                    <button class="week-btn">
+                        ← Previous
+                    </button>
+
+                    <div class="current-week">
+                        <strong>05 Oct - 10 Oct 2026</strong>
+                        <span>Current Week</span>
+                    </div>
+
+                    <button class="week-btn">
+                        Next →
+                    </button>
+
+                </div>
+
+
+                <!-- Timetable -->
+                <div class="timetable-card">
+
+                    <div class="timetable-wrapper">
+
+                        <table class="timetable">
+
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td class="time-slot">
+                                        <strong>09:00</strong>
+                                        <span>10:00 AM</span>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot blue">
+                                            <strong>Python Programming</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 204</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot purple">
+                                            <strong>Django Development</strong>
+                                            <span>B.Tech AI</span>
+                                            <small>Room 301</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot green">
+                                            <strong>Database Management</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Lab 102</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot blue">
+                                            <strong>Python Programming</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 204</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot purple">
+                                            <strong>Django Development</strong>
+                                            <span>B.Tech AI</span>
+                                            <small>Room 301</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot green">
+                                            <strong>Web Development</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 205</small>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="time-slot">
+                                        <strong>10:00</strong>
+                                        <span>11:00 AM</span>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot orange">
+                                            <strong>Web Development</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 205</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot blue">
+                                            <strong>Python Programming</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 204</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot green">
+                                            <strong>Database Management</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Lab 102</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="time-slot">
+                                        <strong>11:00</strong>
+                                        <span>12:00 PM</span>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot green">
+                                            <strong>Database Management</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Lab 102</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot purple">
+                                            <strong>Django Development</strong>
+                                            <span>B.Tech AI</span>
+                                            <small>Room 301</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot orange">
+                                            <strong>Web Development</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 205</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot blue">
+                                            <strong>Python Programming</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 204</small>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="break-row">
+
+                                    <td class="time-slot">
+                                        <strong>12:00</strong>
+                                        <span>01:00 PM</span>
+                                    </td>
+
+                                    <td colspan="6">
+                                        <div class="break-slot">
+                                            Lunch Break
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="time-slot">
+                                        <strong>01:00</strong>
+                                        <span>02:00 PM</span>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot purple">
+                                            <strong>Django Development</strong>
+                                            <span>B.Tech AI</span>
+                                            <small>Room 301</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot blue">
+                                            <strong>Python Programming</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 204</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot green">
+                                            <strong>Database Management</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Lab 102</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot orange">
+                                            <strong>Web Development</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 205</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="time-slot">
+                                        <strong>02:00</strong>
+                                        <span>03:00 PM</span>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot orange">
+                                            <strong>Web Development</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 205</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot blue">
+                                            <strong>Python Programming</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Room 204</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="free-slot">
+                                            Free
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot purple">
+                                            <strong>Django Development</strong>
+                                            <span>B.Tech AI</span>
+                                            <small>Room 301</small>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="class-slot green">
+                                            <strong>Database Management</strong>
+                                            <span>B.Tech CSE</span>
+                                            <small>Lab 102</small>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock %}

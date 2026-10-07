@@ -1,0 +1,269 @@
+{% extends "admins/main.html" %}
+
+{% block title %}Admin Settings{% endblock %}
+
+{% block content %}
+
+<div class="admin-layout">
+
+    {% include "admins/admins_sidebar.html" %}
+
+    <div class="admin-main">
+
+        {% include "admins/admins_navbar.html" %}
+
+        <main class="admin-content">
+
+            <!-- Page Header -->
+            <div class="admin-page-header">
+                <div>
+                    <h1>Settings</h1>
+                    <p>Manage college ERP configuration and administrator preferences</p>
+                </div>
+            </div>
+
+
+            <!-- Settings Layout -->
+            <div class="admin-settings-layout">
+
+                <!-- Settings Navigation -->
+                <aside class="admin-settings-menu">
+
+                    <button class="admin-settings-menu-item active">
+                        <span class="settings-menu-icon">G</span>
+                        General Settings
+                    </button>
+
+                    <button class="admin-settings-menu-item">
+                        <span class="settings-menu-icon">C</span>
+                        College Information
+                    </button>
+
+                    <button class="admin-settings-menu-item">
+                        <span class="settings-menu-icon">A</span>
+                        Academic Settings
+                    </button>
+
+                    <button class="admin-settings-menu-item">
+                        <span class="settings-menu-icon">N</span>
+                        Notification Settings
+                    </button>
+
+                    <button class="admin-settings-menu-item">
+                        <span class="settings-menu-icon">S</span>
+                        Security
+                    </button>
+
+                </aside>
+
+
+                <!-- Settings Content -->
+                <section class="admin-settings-content">
+
+                    <!-- General Settings -->
+                    <div class="admin-panel settings-panel">
+
+                        <div class="settings-section-header">
+                            <div>
+                                <h3>General Settings</h3>
+                                <p>Basic configuration for the College ERP system</p>
+                            </div>
+                        </div>
+
+
+                        <div class="settings-form-grid">
+
+                            <div class="settings-field">
+                                <label>System Name</label>
+                                <input
+                                    type="text"
+                                    value="College ERP"
+                                >
+                            </div>
+
+                            <div class="settings-field">
+                                <label>Academic Year</label>
+
+                                <select>
+                                    <option>2026-27</option>
+                                    <option>2025-26</option>
+                                    <option>2024-25</option>
+                                </select>
+                            </div>
+
+                            <div class="settings-field">
+                                <label>Default Language</label>
+
+                                <select>
+                                    <option>English</option>
+                                    <option>Hindi</option>
+                                    <option>Marathi</option>
+                                </select>
+                            </div>
+
+                            <div class="settings-field">
+                                <label>Timezone</label>
+
+                                <select>
+                                    <option>Asia/Kolkata (IST)</option>
+                                    <option>UTC</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- College Information -->
+                    <div class="admin-panel settings-panel">
+
+                        <div class="settings-section-header">
+                            <div>
+                                <h3>College Information</h3>
+                                <p>Information displayed throughout the ERP system</p>
+                            </div>
+                        </div>
+
+
+                        <div class="settings-form-grid">
+
+                            <div class="settings-field full-width">
+                                <label>College Name</label>
+
+                                <input
+                                    type="text"
+                                    value="College of Engineering"
+                                >
+                            </div>
+
+                            <div class="settings-field">
+                                <label>Email Address</label>
+
+                                <input
+                                    type="email"
+                                    value="admin@college.edu"
+                                >
+                            </div>
+
+                            <div class="settings-field">
+                                <label>Phone Number</label>
+
+                                <input
+                                    type="text"
+                                    value="+91 98765 43210"
+                                >
+                            </div>
+
+                            <div class="settings-field full-width">
+                                <label>College Address</label>
+
+                                <textarea rows="3">College Road, Pune, Maharashtra, India</textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Academic Settings -->
+                    <div class="admin-panel settings-panel">
+
+                        <div class="settings-section-header">
+                            <div>
+                                <h3>Academic Settings</h3>
+                                <p>Configure academic structure and evaluation</p>
+                            </div>
+                        </div>
+
+
+                        <div class="settings-toggle-list">
+
+                            <div class="settings-toggle-item">
+
+                                <div>
+                                    <strong>Enable Attendance Tracking</strong>
+                                    <span>Allow teachers to record student attendance</span>
+                                </div>
+
+                                <label class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+
+                            </div>
+
+
+                            <div class="settings-toggle-item">
+
+                                <div>
+                                    <strong>Enable Online Results</strong>
+                                    <span>Allow students to view examination results</span>
+                                </div>
+
+                                <label class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+
+                            </div>
+
+
+                            <div class="settings-toggle-item">
+
+                                <div>
+                                    <strong>Enable Fee Reminders</strong>
+                                    <span>Automatically notify students about pending fees</span>
+                                </div>
+
+                                <label class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+
+                            </div>
+
+
+                            <div class="settings-toggle-item">
+
+                                <div>
+                                    <strong>Allow Assignment Submission</strong>
+                                    <span>Students can submit assignments through the portal</span>
+                                </div>
+
+                                <label class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Save -->
+                    <div class="settings-actions">
+
+                        <button class="admin-secondary-btn">
+                            Cancel
+                        </button>
+
+                        <button class="admin-primary-btn">
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}
